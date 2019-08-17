@@ -1,13 +1,16 @@
 extends ../template
 
 block variables
-    - var title = 'Добро пожаловать'
+    - var title = 'Main'
 
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
+    .wrapper
+        div.content
+            canvas#canvas.canvas
+            button#btn.button(type="button") Start    
+        div.popup#popup
+            button#popup-close.popup__close(type="button")
+            div.popup__text Your result: 
+                span#popup-result ...
+            button#btn-popup.button.button--dark(type="button") Repeat
+        

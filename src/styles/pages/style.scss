@@ -1,0 +1,183 @@
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include --sm {
+        height: auto;
+        align-items: initial;
+        margin: 3em auto;
+    }
+
+    @include --xs {
+        height: 100%;
+        align-items: center;
+        margin: 0;
+    }
+}
+
+.content {
+    position: relative;
+}
+
+.content:after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    width: 0;
+    height: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 15px solid transparent;
+    border-top-color: $orange;
+    border-bottom-width: 0;
+    border-radius: 4px;
+}
+
+.canvas {
+    width: 500px;
+    height: 500px;
+
+    @include --lg {
+        width: 400px;
+        height: 400px;
+    }
+
+    @include --sm {
+        width: 300px;
+        height: 300px;
+    }
+
+    @include --xs {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+.button {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    color: $b;
+    background: $w;
+    border: none;
+    border-radius: em(3/16);
+    padding: em(19/16) em(40/16);
+    cursor: pointer;
+    font-family: $font;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+    margin-top: em(32/16);
+
+    &:hover {
+        background: $orange;
+        color: $w;
+    }
+
+    @include --sm {
+        font-size: 15px;
+    }
+
+    @include --xs {
+        font-size: 14px;
+    }
+}
+
+.button--dark {
+    color: $w;
+    background: $b;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: em(350/14);
+    height: auto;
+    padding: em(40/14);
+    background: $w;
+    border-radius: em(3/14);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include --xs {
+        width: 280px;
+        height: auto;
+        padding: 30px;
+    }
+}
+
+.popup__close {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: em(40/14);
+    width: em(40/14);
+    padding: 0;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        width: 50%;
+        transform: rotate(45deg);
+        border-top: 2px solid $b;
+        transition: 0.3s;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        width: 50%;
+        transform: rotate(-45deg);
+        border-top: 2px solid $b;
+        transition: 0.3s;
+    }
+
+    &:hover:before,
+    &:hover:after {
+        border-color: $orange;
+    }
+
+    @include --xs {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.popup__text {
+    font-size: 22px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    color: $b;
+    text-align: center;
+
+    @include --xs {
+        font-size: 20px;
+    }
+}
+
+.popup__bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba($color: #232323, $alpha: 0.9);
+}
