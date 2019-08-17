@@ -1,1 +1,1 @@
-link:
+link: https://kosvoloshin.github.io/tz-lc/build/index.html
