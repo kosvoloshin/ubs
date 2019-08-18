@@ -1,183 +1,229 @@
+$nav_width: rem(128px);
+
 .wrapper {
     height: 100%;
     width: 100%;
+    overflow: hidden;
+}
+
+.nav {
+    background-color: #282e35;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $nav_width;
+    padding: 30px 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__list {
+    width: 100%;
+    text-align: center;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.avatar__counter {
+    position: absolute;
+    color: $w;
+    background-color: $link;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 30px;
+    top: -7px;
+    right: 3px;
+    font-size: 16px;
+}
+
+.nav__divider {
+    width: 26px;
+    height: 23px;
+    fill: #595959;
+}
+
+.nav__item {
+    text-align: center;
+}
+
+.nav__link {
+    padding: 17px 0;
+    border: 3px solid transparent;
+    display: block;
+    position: relative;
+
+    &:hover,
+    &.active {
+        .nav__icon {
+            fill: $link;
+        }
+
+        .nav__text {
+            color: $w;
+        }
+    }
+
+    &.active {
+        border-left-color: $link;
+    }
+}
+
+.nav__counter {
+    position: absolute;
+    top: 3px;
+    right: 18px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 16px;
+    background-color: #adadad;
+    color: $w;
+}
+
+.nav__counter--link {
+    background-color: $link;
+}
+
+.nav__icon {
+    width: 43px;
+    height: 43px;
+    fill: #4f5154;
+    transition: 0.3s;
+}
+
+.nav__text {
+    font-size: 18px;
+    line-height: normal;
+    font-weight: normal;
+    color: #787878;
+    transition: 0.3s;
+}
+
+.container {
+    margin-left: $nav_width;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+}
+
+.head__col {
+    flex: 1;
+    display: flex;
     align-items: center;
 
-    @include --sm {
-        height: auto;
-        align-items: initial;
-        margin: 3em auto;
-    }
-
-    @include --xs {
-        height: 100%;
-        align-items: center;
-        margin: 0;
-    }
-}
-
-.content {
-    position: relative;
-}
-
-.content:after {
-    content: '';
-    position: absolute;
-    top: -1px;
-    width: 0;
-    height: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    border: 15px solid transparent;
-    border-top-color: $orange;
-    border-bottom-width: 0;
-    border-radius: 4px;
-}
-
-.canvas {
-    width: 500px;
-    height: 500px;
-
-    @include --lg {
-        width: 400px;
-        height: 400px;
-    }
-
-    @include --sm {
-        width: 300px;
-        height: 300px;
-    }
-
-    @include --xs {
-        width: 280px;
-        height: 280px;
+    &:last-child {
+        justify-content: flex-end;
     }
 }
 
 .button {
+    background: none;
+    border: 1px solid;
     font-size: 16px;
-    font-weight: 400;
     font-style: normal;
     line-height: normal;
-    color: $b;
-    background: $w;
-    border: none;
-    border-radius: em(3/16);
-    padding: em(19/16) em(40/16);
-    cursor: pointer;
-    font-family: $font;
-    display: block;
-    margin: 0 auto;
+    padding: em(10/16) em(17/16);
+    border-radius: em(20/16);
+    color: $text;
     transition: 0.3s;
-    margin-top: em(32/16);
+    cursor: pointer;
 
     &:hover {
-        background: $orange;
+        border-color: $link;
+        background-color: $link;
         color: $w;
     }
+}
 
-    @include --sm {
-        font-size: 15px;
-    }
+.button + .button {
+    margin-left: 10px;
+}
 
-    @include --xs {
-        font-size: 14px;
+.button--icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+
+    & .icon {
+        fill: $w;
+        height: 45%;
+        width: 45%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
-.button--dark {
+.button--link {
+    border-color: $link;
+    background-color: $link;
     color: $w;
-    background: $b;
+
+    &:hover {
+        border-color: darken($color: $link, $amount: 5);
+        background-color: darken($color: $link, $amount: 5);
+    }
 }
 
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: em(350/14);
-    height: auto;
-    padding: em(40/14);
-    background: $w;
-    border-radius: em(3/14);
-    flex-direction: column;
+.select {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-
-    @include --xs {
-        width: 280px;
-        height: auto;
-        padding: 30px;
-    }
-}
-
-.popup__close {
-    background: none;
-    border: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: em(40/14);
-    width: em(40/14);
-    padding: 0;
+    padding: 9.5px 17px;
+    border: 1px solid;
+    border-radius: 20px;
     cursor: pointer;
+    transition: 0.3s;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 25%;
-        width: 50%;
-        transform: rotate(45deg);
-        border-top: 2px solid $b;
-        transition: 0.3s;
-    }
+    &:hover {
+        border-color: $link;
+        background-color: $link;
+        color: $w;
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 25%;
-        width: 50%;
-        transform: rotate(-45deg);
-        border-top: 2px solid $b;
-        transition: 0.3s;
-    }
-
-    &:hover:before,
-    &:hover:after {
-        border-color: $orange;
-    }
-
-    @include --xs {
-        height: 30px;
-        width: 30px;
+        & .icon {
+            fill: $w;
+        }
     }
 }
 
-.popup__text {
-    font-size: 22px;
-    font-weight: 400;
+.select__text {
+    font-size: 14px;
+    text-transform: uppercase;
     font-style: normal;
     line-height: normal;
-    color: $b;
-    text-align: center;
-
-    @include --xs {
-        font-size: 20px;
-    }
+    margin: 0 8px;
+    font-weight: 600;
 }
 
-.popup__bg {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99;
-    background: rgba($color: #232323, $alpha: 0.9);
+.select .icon {
+    width: 13px;
+    height: 13px;
+    fill: $text;
+    transition: 0.3s;
 }

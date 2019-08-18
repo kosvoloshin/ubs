@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <title>Main</title>
@@ -11,14 +11,199 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="content">
-        <canvas class="canvas" id="canvas"></canvas>
-        <button class="button" id="btn" type="button">Start    </button>
-      </div>
-      <div class="popup" id="popup">
-        <button class="popup__close" id="popup-close" type="button"></button>
-        <div class="popup__text">Your result: <span id="popup-result">...</span></div>
-        <button class="button button--dark" id="btn-popup" type="button">Repeat</button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="avatar" href="#" style="background-image: url('./assets/images/avatar.jpg');"><span class="avatar__counter">2</span></a></li>
+          <li class="nav__item">
+            <svg class="nav__divider">
+              <use xlink:href="assets/images/icons/sprite.svg#more"></use>
+            </svg><a class="nav__link active" href="#">
+              <svg class="nav__icon">
+                <use xlink:href="assets/images/icons/sprite.svg#speedometer"></use>
+              </svg>
+              <div class="nav__text">Board</div></a>
+          </li>
+          <li class="nav__item">
+            <svg class="nav__divider">
+              <use xlink:href="assets/images/icons/sprite.svg#more"></use>
+            </svg><a class="nav__link" href="#"><span class="nav__counter">9</span>
+              <svg class="nav__icon">
+                <use xlink:href="assets/images/icons/sprite.svg#menu-ham"></use>
+              </svg>
+              <div class="nav__text">Projects</div></a>
+          </li>
+          <li class="nav__item">
+            <svg class="nav__divider">
+              <use xlink:href="assets/images/icons/sprite.svg#more"></use>
+            </svg><a class="nav__link" href="#">
+              <svg class="nav__icon">
+                <use xlink:href="assets/images/icons/sprite.svg#settings-work-tool"></use>
+              </svg>
+              <div class="nav__text">Settings</div></a>
+          </li>
+        </ul>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#"><span class="nav__counter nav__counter--link">9</span>
+              <svg class="nav__icon">
+                <use xlink:href="assets/images/icons/sprite.svg#upgrade"></use>
+              </svg>
+              <div class="nav__text">Upgrade</div></a></li>
+          <li class="nav__item">
+            <svg class="nav__divider">
+              <use xlink:href="assets/images/icons/sprite.svg#more"></use>
+            </svg><a class="nav__link" href="#">
+              <svg class="nav__icon">
+                <use xlink:href="assets/images/icons/sprite.svg#power-button-off"></use>
+              </svg>
+              <div class="nav__text">Logout</div></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="head">
+          <div class="head__col">
+            <button class="button button--icon button--link" type="button">
+              <svg class="icon">
+                <use xlink:href="assets/images/icons/sprite.svg#undo-button"></use>
+              </svg>
+            </button>
+            <button class="button" type="button">Dashboard</button>
+          </div>
+          <div class="head__col">
+            <div class="select">
+              <svg class="icon">
+                <use xlink:href="assets/images/icons/sprite.svg#speech-bubble"></use>
+              </svg><span class="select__text">5 user online</span>
+              <svg class="icon">
+                <use xlink:href="assets/images/icons/sprite.svg#angle-arrow-down"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="tabs">
+          <div class="tabs__col">
+            <ul class="tabs__list">
+              <li class="tabs__item"><a class="tabs__link active" href="#">
+                  <svg class="icon">
+                    <use xlink:href="assets/images/icons/sprite.svg#clock-circular-outline"></use>
+                  </svg><span class="tabs__text">Active Projects</span><span class="tabs__counter">9</span></a></li>
+              <li class="tabs__item"><a class="tabs__link" href="#">
+                  <svg class="icon">
+                    <use xlink:href="assets/images/icons/sprite.svg#send"></use>
+                  </svg><span class="tabs__text">Messenger</span><span class="tabs__counter">2</span></a></li>
+            </ul>
+          </div>
+          <div class="tabs__col">
+            <input class="search" type="search" placeholder="Search Project, User, Task, etc...">
+          </div>
+        </div>
+        <div class="content">
+          <div class="projects">
+            <div class="projects__head">
+              <div class="projects__col">
+                <input class="search" type="search" placeholder="Search Project, User, Task, etc...">
+              </div>
+              <div class="projects__col">
+                <div class="select"><span class="select__text">New Projects<span class="thin">(descending)</span></span>
+                  <svg class="icon">
+                    <use xlink:href="assets/images/icons/sprite.svg#angle-arrow-down"></use>
+                  </svg>
+                </div>
+                <button class="button" type="button">
+                  <svg class="icon">
+                    <use xlink:href="assets/images/icons/sprite.svg#add"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <ul class="archiv">
+              <li class="archiv__item">
+                <div class="archiv__col">
+                  <div class="archiv__progress">23%</div><a class="archiv__title" href="#">Create Contact Formular</a>
+                </div>
+                <div class="archiv__col">
+                  <button class="button" type="button">Worlda</button>
+                  <button class="button" type="button">
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                  <button class="button" type="button">
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#angle-arrow-down"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="archiv__item archiv__item--todo">
+                <div class="archiv__col">
+                  <div class="archiv__progress">66%</div><a class="archiv__title" href="#">Creating the Context</a>
+                </div>
+                <div class="archiv__col">
+                  <ul class="users">
+                    <li class="users__item"><a class="users__link" href="#"></a></li>
+                    <li class="users__item"><a class="users__link" href="#"></a></li>
+                    <li class="users__item"><a class="users__link" href="#"></a></li>
+                  </ul>
+                  <button class="button" type="button">+3</button>
+                  <button class="button" type="button">
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#undo-button"></use>
+                    </svg><span>Today, 13:40 PM</span>
+                  </button>
+                  <button class="button" type="button">
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="archiv__item archiv__item--check">
+                <div class="archiv__col">
+                  <div class="archiv__progress">ready</div><a class="archiv__title" href="#">Creating the Context
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                    </svg></a>
+                </div>
+                <div class="archiv__col">
+                  <ul class="users">
+                    <li class="users__item"><a class="users__link" href="#"></a></li>
+                    <li class="users__item"><a class="users__link" href="#"></a></li>
+                  </ul>
+                  <button class="button" type="button">
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#undo-button"></use>
+                    </svg><span>Yestarday, 12:40 PM</span>
+                  </button>
+                  <button class="button" type="button">
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <div class="bottom"><a class="bottom__link" href="#">Project Archiv
+                <svg class="icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#angle-arrow-pointing-to-right"></use>
+                </svg></a></div>
+          </div>
+          <div class="activity">
+            <ul class="team">
+              <li class="team__item">
+                <div class="team__avatar"></div>
+                <div class="team__content">
+                  <div class="team__info">Mark P.<span>add an Image into Wordla</span></div>
+                  <div class="team__date">today, 10:30 PM</div>
+                </div>
+              </li>
+            </ul>
+            <div class="bottom"><a class="bottom__link" href="#">Project Archiv
+                <svg class="icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#angle-arrow-pointing-to-right"></use>
+                </svg></a></div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./assets/scripts/bundle.js" defer></script>

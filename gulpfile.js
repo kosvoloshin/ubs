@@ -9,6 +9,10 @@ const browserSync = require('browser-sync').create();
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
+const cheerio = require('gulp-cheerio');
+const svgmin = require('gulp-svgmin');
+const replace = require('gulp-string-replace');
+const svgSprite = require('gulp-svg-sprite');
 
 const paths = {
     root: './build',
@@ -103,3 +107,41 @@ gulp.task('default', gulp.series(
     gulp.parallel(styles, templates, images, scripts, fonts),
     gulp.parallel(watch, server)
 ));
+
+// config svg sprite
+const config = {
+    mode: {
+        symbol: {
+            sprite: "../sprite.svg",
+            example: {
+                dest: '../spriteSvgDemo.html' // demo html
+            }
+        }
+    }
+};
+
+gulp.task('sprite', function() {
+    return gulp.src('src/images/icons/*.svg')
+        // minify svg
+        .pipe(svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        // de attr fill, style and stroke
+        .pipe(cheerio({
+            run: function($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {
+                xmlMode: true
+            }
+        }))
+        // change '&gt;'
+        .pipe(replace('&gt;', '>'))
+        // build svg sprite
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('src/images/icons'));
+});

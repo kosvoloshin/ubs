@@ -5,12 +5,135 @@ block variables
 
 block content
     .wrapper
-        div.content
-            canvas#canvas.canvas
-            button#btn.button(type="button") Start    
-        div.popup#popup
-            button#popup-close.popup__close(type="button")
-            div.popup__text Your result: 
-                span#popup-result ...
-            button#btn-popup.button.button--dark(type="button") Repeat
+        nav.nav
+            ul.nav__list
+                li.nav__item
+                    a.avatar(href="#" style="background-image: url('./assets/images/avatar.jpg');")
+                        span.avatar__counter 2
+                li.nav__item
+                    svg.nav__divider: use(xlink:href="assets/images/icons/sprite.svg#more")
+                    a.nav__link.active(href="#")
+                        svg.nav__icon: use(xlink:href="assets/images/icons/sprite.svg#speedometer")
+                        .nav__text Board
+                li.nav__item
+                    svg.nav__divider: use(xlink:href="assets/images/icons/sprite.svg#more")
+                    a.nav__link(href="#")
+                        span.nav__counter 9
+                        svg.nav__icon: use(xlink:href="assets/images/icons/sprite.svg#menu-ham")
+                        .nav__text Projects
+                li.nav__item
+                    svg.nav__divider: use(xlink:href="assets/images/icons/sprite.svg#more")
+                    a.nav__link(href="#")
+                        svg.nav__icon: use(xlink:href="assets/images/icons/sprite.svg#settings-work-tool")
+                        .nav__text Settings
+            ul.nav__list
+                li.nav__item
+                    a.nav__link(href="#")
+                        span.nav__counter.nav__counter--link 9
+                        svg.nav__icon: use(xlink:href="assets/images/icons/sprite.svg#upgrade")
+                        .nav__text Upgrade
+                li.nav__item
+                    svg.nav__divider: use(xlink:href="assets/images/icons/sprite.svg#more")
+                    a.nav__link(href="#")
+                        svg.nav__icon: use(xlink:href="assets/images/icons/sprite.svg#power-button-off")
+                        .nav__text Logout
+        .container
+            .head
+                .head__col
+                    button(type="button").button.button--icon.button--link
+                        svg.icon: use(xlink:href="assets/images/icons/sprite.svg#undo-button")
+                    button(type="button").button Dashboard
+                .head__col
+                    .select
+                        svg.icon: use(xlink:href="assets/images/icons/sprite.svg#speech-bubble")
+                        span.select__text 5 user online
+                        svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
+            .tabs
+                .tabs__col
+                    ul.tabs__list
+                        li.tabs__item
+                            a.tabs__link.active(href="#")
+                                svg.icon: use(xlink:href="assets/images/icons/sprite.svg#clock-circular-outline")
+                                span.tabs__text Active Projects
+                                span.tabs__counter 9
+                        li.tabs__item
+                            a.tabs__link(href="#")
+                                svg.icon: use(xlink:href="assets/images/icons/sprite.svg#send")
+                                span.tabs__text Messenger
+                                span.tabs__counter 2
+                .tabs__col
+                    input.search(type="search" placeholder="Search Project, User, Task, etc...")
+            .content
+                .projects
+                    .projects__head
+                        .projects__col
+                            input.search(type="search" placeholder="Search Project, User, Task, etc...")
+                        .projects__col
+                            .select
+                                span.select__text New Projects
+                                    span.thin (descending)
+                                svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
+                            button(type="button").button
+                                svg.icon: use(xlink:href="assets/images/icons/sprite.svg#add")
+                    ul.archiv
+                        li.archiv__item
+                            .archiv__col
+                                .archiv__progress 23%
+                                a(href="#").archiv__title Create Contact Formular
+                            .archiv__col
+                                button(type="button").button Worlda
+                                button(type="button").button
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                                button(type="button").button
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
+                        li.archiv__item.archiv__item--todo
+                            .archiv__col
+                                .archiv__progress 66%
+                                a(href="#").archiv__title Creating the Context
+                            .archiv__col
+                                ul.users
+                                    li.users__item
+                                        a(href="#").users__link
+                                    li.users__item
+                                        a(href="#").users__link
+                                    li.users__item
+                                        a(href="#").users__link
+                                button(type="button").button +3
+                                button(type="button").button
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#undo-button")
+                                    span Today, 13:40 PM
+                                button(type="button").button
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                        li.archiv__item.archiv__item--check
+                            .archiv__col
+                                .archiv__progress ready
+                                a(href="#").archiv__title Creating the Context
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#check")
+                            .archiv__col
+                                ul.users
+                                    li.users__item
+                                        a(href="#").users__link
+                                    li.users__item
+                                        a(href="#").users__link
+                                button(type="button").button
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#undo-button")
+                                    span Yestarday, 12:40 PM
+                                button(type="button").button
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                    .bottom
+                        a.bottom__link(href="#") Project Archiv
+                            svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-pointing-to-right")
+                .activity
+                    ul.team
+                        li.team__item
+                            .team__avatar
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                    .bottom
+                        a.bottom__link(href="#") Project Archiv
+                            svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-pointing-to-right")
+
+
         
