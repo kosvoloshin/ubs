@@ -44,6 +44,8 @@ block content
                         svg.icon: use(xlink:href="assets/images/icons/sprite.svg#undo-button")
                     button(type="button").button Dashboard
                 .head__col
+                    button(type="button").button.button--icon.button--green
+                        svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
                     .select
                         svg.icon: use(xlink:href="assets/images/icons/sprite.svg#speech-bubble")
                         span.select__text 5 user online
@@ -55,12 +57,12 @@ block content
                             a.tabs__link.active(href="#")
                                 svg.icon: use(xlink:href="assets/images/icons/sprite.svg#clock-circular-outline")
                                 span.tabs__text Active Projects
-                                span.tabs__counter 9
+                                    span.tabs__counter 9
                         li.tabs__item
                             a.tabs__link(href="#")
                                 svg.icon: use(xlink:href="assets/images/icons/sprite.svg#send")
                                 span.tabs__text Messenger
-                                span.tabs__counter 2
+                                    span.tabs__counter 2
                 .tabs__col
                     input.search(type="search" placeholder="Search Project, User, Task, etc...")
             .content
