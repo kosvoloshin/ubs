@@ -18,6 +18,20 @@ $nav_width: rem(128px);
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    @include --xxl {
+        padding: 25px 0;
+    }
+
+    @include --xl {
+        width: 110px;
+        padding: 20px 0;
+    }
+
+    @include --lg {
+        width: 90px;
+        padding: 15px 0 5px;
+    }
 }
 
 .nav__list {
@@ -36,6 +50,16 @@ $nav_width: rem(128px);
     position: relative;
     margin: 0 auto;
     margin-bottom: 15px;
+
+    @include --xl {
+        width: 80px;
+        height: 80px;
+    }
+
+    @include --lg {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .avatar__counter {
@@ -50,12 +74,40 @@ $nav_width: rem(128px);
     top: -7px;
     right: 3px;
     font-size: 16px;
+
+    @include --xxl {
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
+    }
+
+    @include --xl {
+        top: -9px;
+        right: 0px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+
+    @include --lg {
+        top: -6px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+    }
 }
 
 .nav__divider {
     width: 26px;
     height: 23px;
     fill: #595959;
+
+    @include --xl {
+        width: 21px;
+        height: 18px;
+    }
 }
 
 .nav__item {
@@ -82,6 +134,18 @@ $nav_width: rem(128px);
     &.active {
         border-left-color: $link;
     }
+
+    @include --xxl {
+        padding: 15px 0;
+    }
+
+    @include --xl {
+        padding: 12px 0;
+    }
+
+    @include --lg {
+        padding: 10px 0;
+    }
 }
 
 .nav__counter {
@@ -96,6 +160,31 @@ $nav_width: rem(128px);
     font-size: 16px;
     background-color: #adadad;
     color: $w;
+
+    @include --xxl {
+        right: 24px;
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
+    }
+
+    @include --xl {
+        right: 20px;
+        top: 1px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+    }
+
+    @include --lg {
+        right: 16px;
+        top: 1px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+    }
 }
 
 .nav__counter--link {
@@ -107,6 +196,16 @@ $nav_width: rem(128px);
     height: 43px;
     fill: #4f5154;
     transition: 0.3s;
+
+    @include --xxl {
+        width: 33px;
+        height: 33px;
+    }
+
+    @include --lg {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 .nav__text {
@@ -115,10 +214,27 @@ $nav_width: rem(128px);
     font-weight: normal;
     color: #787878;
     transition: 0.3s;
+
+    @include --xxl {
+        font-size: 16px;
+    }
+
+    @include --lg {
+        font-size: 14px;
+    }
 }
 
 .container {
     margin-left: $nav_width;
+    height: 100%;
+
+    @include --xl {
+        margin-left: 110px;
+    }
+
+    @include --lg {
+        margin-left: 90px;
+    }
 }
 
 .head {
@@ -126,6 +242,10 @@ $nav_width: rem(128px);
     flex-direction: row;
     align-items: center;
     padding: 30px;
+
+    @include --xl {
+        padding: 20px;
+    }
 }
 
 .head__col {
@@ -140,7 +260,7 @@ $nav_width: rem(128px);
 
 .button {
     background: none;
-    border: 1px solid;
+    border: 1px solid $bd_color;
     font-size: 16px;
     font-style: normal;
     line-height: normal;
@@ -155,14 +275,34 @@ $nav_width: rem(128px);
         background-color: $link;
         color: $w;
     }
+
+    @include --xl {
+        font-size: 14px;
+    }
 }
 
 .button + .button {
     margin-left: 10px;
+
+    @include --lg {
+        margin-left: 5px;
+    }
 }
 
 .button + .select {
     margin-left: 10px;
+
+    @include --lg {
+        margin-left: 5px;
+    }
+}
+
+.select + .button {
+    margin-left: 10px;
+
+    @include --lg {
+        margin-left: 5px;
+    }
 }
 
 .button--icon {
@@ -180,6 +320,11 @@ $nav_width: rem(128px);
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    @include --xl {
+        height: 35px;
+        width: 35px;
     }
 }
 
@@ -205,13 +350,74 @@ $nav_width: rem(128px);
     }
 }
 
+.button--archiv {
+    padding: em(7/14) em(17/14);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+
+    & .icon {
+        width: 1em;
+        height: 1em;
+        fill: #a6a6a6;
+        margin-right: 5px;
+    }
+
+    &:hover .icon {
+        fill: $w;
+    }
+
+    @include --xl {
+        font-size: 12px;
+        padding: em(7/14) em(15/14);
+    }
+
+    @include --lg {
+        font-size: 10px;
+    }
+}
+
+.button--round {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+    font-size: 12px;
+    color: #a6a6a6;
+
+    & .icon {
+        fill: #a6a6a6;
+        height: 45%;
+        width: 45%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover .icon {
+        fill: $w;
+    }
+
+    @include --xl {
+        height: 29px;
+        width: 29px;
+    }
+
+    @include --lg {
+        height: 23px;
+        width: 23px;
+    }
+}
+
 .select {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 11px 17px;
-    border: 1px solid;
+    border: 1px solid $bd_color;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
@@ -225,6 +431,10 @@ $nav_width: rem(128px);
             fill: $w;
         }
     }
+
+    @include --xl {
+        padding: 8.5px 15px;
+    }
 }
 
 .select__text {
@@ -234,6 +444,11 @@ $nav_width: rem(128px);
     line-height: normal;
     margin: 0 8px;
     font-weight: 600;
+}
+
+.select__text .thin {
+    text-transform: none;
+    font-weight: 400;
 }
 
 .select .icon {
@@ -260,6 +475,12 @@ $nav_width: rem(128px);
     }
 }
 
+.tabs__col:last-child {
+    @include --xl{
+        padding: 0 20px;
+    }
+}
+
 .tabs__list {
     display: flex;
     flex-direction: row;
@@ -281,6 +502,14 @@ $nav_width: rem(128px);
         background-color: $w;
         margin-bottom: -1px;
     }
+
+    &:hover .icon {
+        fill: $link;
+    }   
+
+    @include --lg {
+        padding: 20px;
+    }
 }
 
 .tabs__link.active .tabs__counter {
@@ -291,6 +520,17 @@ $nav_width: rem(128px);
     width: 40px;
     height: 40px;
     fill: #d5d5d5;
+    transition: 0.3s;
+
+    @include --xl {
+        width: 30px;
+        height: 30px;
+    }
+
+    @include --lg {
+        width: 25px;
+        height: 25px;
+    }
 }
 
 .tabs__text {
@@ -300,6 +540,16 @@ $nav_width: rem(128px);
     font-weight: 600;
     color: #4b4b4b;
     margin-left: 15px;
+
+    @include --xl {
+        font-size: 22px;
+        margin-left: 12px;
+    }
+
+    @include --lg {
+        font-size: 20px;
+        margin-left: 8px;
+    }
 }
 
 .tabs__counter {
@@ -314,6 +564,23 @@ $nav_width: rem(128px);
     font-size: 16px;
     margin-left: 5px;
     transform: translate(0, -15px);
+
+    @include --xl {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+        transform: translate(0, -12px);
+    }
+
+    @include --lg {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+        transform: translate(0, -11px);
+        margin-left: 2px;
+    }
 }
 
 .search {
@@ -325,6 +592,13 @@ $nav_width: rem(128px);
     max-width: 330px;
     font-size: 20px;
     border-radius: 20px;
+    outline: none;
+
+    @include --xl {
+        padding: 7.5px 15px;
+        max-width: 280px;
+        font-size: 16px;
+    }
 }
 
 .search:focus {
@@ -344,17 +618,342 @@ $nav_width: rem(128px);
     padding: 30px;
     display: flex;
     flex-direction: row;
+    height: calc(100% - 182px);
+
+    @include --xl {
+        padding: 20px;
+        height: calc(100% - 152px);
+    }
+
+    @include --lg {
+        height: calc(100% - 142px);
+    }
 }
 
 .projects {
     margin-right: 20px;
     border: 1px solid $bd_color;
+    border-radius: 5px;
+    width: calc(73% - 20px);
+}
+
+.projects__head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 26px;
+    border-bottom: 1px solid $bd_color;
+
+    @include --xl {
+        padding: 20px;
+    }
+}
+
+.projects__col {
+    flex: 1;
+
+    &:last-child {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.archiv {
+    overflow-x: hidden;
+    height: calc(100% - 148px);
+
+    @include --xl {
+        height: calc(100% - 130px);
+    }
+
+    @include --lg {
+        height: calc(100% - 117px);
+    }
+}
+
+.archiv__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid $bd_color;
+    padding: 29px 31px;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    @include --xl {
+        padding: 20px;
+    }
+}
+
+.archiv__item--check {
+    background-color: #f8f8f8;
+}
+
+.archiv__item--check .users__link:before {
+    border-color: #f8f8f8;
+}
+
+.archiv__item--check .archiv__progress {
+    background: transparent;
+    border-color: $bd_color;
+    color: #bebebe;
+}
+
+.archiv__col {
+    flex: 1;
+
+    &:last-child {
+        text-align: right;
+    }
+}
+
+.archiv__col * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.archiv__progress {
+    display: inline-block;
+    font-size: 20px;
+    line-height: normal;
+    background: $link;
+    color: $w;
     border-radius: 3px;
-    width: 72%;
+    padding: 4.5px 0;
+    margin-right: 13px;
+    border: 1px solid $link;
+    width: 57px;
+    text-align: center;
+
+    @include --xl {
+        font-size: 18px;
+    }
+
+    @include --lg {
+        font-size: 16px;
+        width: 52px;
+        padding: 3px 0;
+    }
+}
+
+.archiv__title {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    color: $text;
+    transition: 0.3s;
+    word-wrap: break-word;
+    width: calc(100% - 70px);
+
+    &:hover {
+        color: $link;
+    }
+
+    @include --xl {
+        font-size: 20px;
+    }
+
+    @include --lg {
+        font-size: 18px;
+    }
+}
+
+.archiv__title--dis {
+    text-decoration: line-through;
+    color: #bdbdbd;
+
+    & .icon {
+        fill: #bdbdbd;
+    }
+}
+
+.archiv__title .icon {
+    width: 0.7em;
+    height: 0.7em;
+    margin-left: 5px;
+}
+
+.users__item {
+    margin-right: 5px;
+}
+
+.users__link {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: #c5c5c5;
+        border-radius: 50%;
+        position: absolute;
+        left: -2px;
+        top: -2px;
+        border: 2px solid $w;
+    }
+
+    &.active:before {
+        background: #aacc4e;
+    }
+
+    @include --xl {
+        height: 29px;
+        width: 29px;
+    }
+
+    @include --lg {
+        height: 23px;
+        width: 23px;
+    }
+}
+
+.bottom {
+    padding: 16px 30px;
+    border-top: 1px solid $bd_color;
+
+    @include --xl {
+        padding: 13px 20px;
+    }
+
+    @include --lg {
+        padding: 10px 20px;
+    }
+}
+
+.bottom__link {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    color: #4b4b4b;
+    transition: 0.3s;
+
+    &:hover {
+        color: $link;
+    }
+
+    &:hover .icon {
+        fill: $link;
+    }
+
+    @include --lg {
+        font-size: 16px;
+    }
+}
+
+.bottom__link .icon {
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 5px;
+    fill: #a6a6a6;
 }
 
 .activity {
     border: 1px solid $bd_color;
-    border-radius: 3px;
-    width: 28%;
+    border-radius: 5px;
+    width: 27%;
+}
+
+.team {
+    height: calc(100% - 55px);
+    overflow-x: hidden;
+
+    @include --xl {
+        height: calc(100% - 49px);
+    }
+
+    @include --lg {
+        height: calc(100% - 41px);
+    }
+}
+
+.team__item {
+    border-bottom: 1px solid $bd_color;
+    display: flex;
+    align-items: flex-start;
+    padding: 24px 29px;
+
+    @include --xl {
+        padding: 20px;
+    }
+
+    @include --lg {
+        padding: 13px 20px;
+    }
+}
+
+.team__avatar {
+    height: 42px;
+    width: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    margin-right: 10px;
+    display: block;
+
+    @include --lg {
+        height: 35px;
+        width: 35px;
+        min-width: 35px;
+    }
+}
+
+.team__avatar:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #c5c5c5;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 2px solid #fff;
+}
+
+.team__avatar.active:before {
+    background: #aacc4e;
+}
+
+.team__info {
+    font-size: 18px;
+    line-height: normal;
+    color: #4b4b4b;
+
+    span {
+        color: #909090;
+    }
+
+    @include --xl {
+        font-size: 16px;
+    }
+}
+
+.team__date {
+    font-size: 14px;
+    line-height: normal;
+    text-transform: uppercase;
+    color: $grey;
+
+    @include --lg {
+        font-size: 12px;
+    }
+}
+
+.team__info + .team__date {
+    margin-top: 4px;
 }

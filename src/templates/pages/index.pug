@@ -72,63 +72,179 @@ block content
                             input.search(type="search" placeholder="Search Project, User, Task, etc...")
                         .projects__col
                             .select
-                                span.select__text New Projects
+                                span.select__text New Projects 
                                     span.thin (descending)
                                 svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
-                            button(type="button").button
+                            button(type="button").button.button--icon.button--link
                                 svg.icon: use(xlink:href="assets/images/icons/sprite.svg#add")
                     ul.archiv
                         li.archiv__item
                             .archiv__col
-                                .archiv__progress 23%
+                                .archiv__progress 87%
                                 a(href="#").archiv__title Create Contact Formular
                             .archiv__col
-                                button(type="button").button Worlda
-                                button(type="button").button
+                                button(type="button").button.button--archiv Worlda
+                                button(type="button").button.button--round
                                     svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
-                                button(type="button").button
+                                button(type="button").button.button--round
                                     svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
-                        li.archiv__item.archiv__item--todo
+                        li.archiv__item
+                            .archiv__col
+                                .archiv__progress 83%
+                                a(href="#").archiv__title Create Subpage PSD
+                            .archiv__col
+                                button(type="button").button.button--archiv Panorama
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
+                        li.archiv__item
+                            .archiv__col
+                                .archiv__progress 23%
+                                a(href="#").archiv__title Layout & implementation in HTML & CSS
+  
+                            .archiv__col
+                                button(type="button").button.button--archiv Ebay Relaunch
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
+                        li.archiv__item.archiv__item--check
                             .archiv__col
                                 .archiv__progress 66%
                                 a(href="#").archiv__title Creating the Context
                             .archiv__col
                                 ul.users
                                     li.users__item
-                                        a(href="#").users__link
+                                        a(href="#" style="background-image: url('./assets/images/user-1.jpg');").users__link.active
                                     li.users__item
-                                        a(href="#").users__link
+                                        a(href="#" style="background-image: url('./assets/images/user-2.jpg');").users__link.active
                                     li.users__item
-                                        a(href="#").users__link
-                                button(type="button").button +3
-                                button(type="button").button
+                                        a(href="#" style="background-image: url('./assets/images/user-3.jpg');").users__link
+                                button(type="button").button.button--round +3
+                                button(type="button").button.button--archiv
                                     svg.icon: use(xlink:href="assets/images/icons/sprite.svg#undo-button")
                                     span Today, 13:40 PM
-                                button(type="button").button
+                                button(type="button").button.button--round
                                     svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
                         li.archiv__item.archiv__item--check
                             .archiv__col
                                 .archiv__progress ready
-                                a(href="#").archiv__title Creating the Context
+                                a(href="#").archiv__title.archiv__title--dis Creating the Context
                                     svg.icon: use(xlink:href="assets/images/icons/sprite.svg#check")
                             .archiv__col
                                 ul.users
                                     li.users__item
-                                        a(href="#").users__link
+                                        a(href="#" style="background-image: url('./assets/images/user-1.jpg');").users__link.active
                                     li.users__item
-                                        a(href="#").users__link
-                                button(type="button").button
+                                        a(href="#" style="background-image: url('./assets/images/user-2.jpg');").users__link.active
+                                button(type="button").button.button--archiv
                                     svg.icon: use(xlink:href="assets/images/icons/sprite.svg#undo-button")
                                     span Yestarday, 12:40 PM
-                                button(type="button").button
+                                button(type="button").button.button--round
                                     svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                        li.archiv__item
+                            .archiv__col
+                                .archiv__progress 23%
+                                a(href="#").archiv__title Lorem ipsum dolor sit amet, elitr, sed diam nonumy eirmod tempor
+  
+                            .archiv__col
+                                button(type="button").button.button--archiv Panorama
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
+                        li.archiv__item
+                            .archiv__col
+                                .archiv__progress 87%
+                                a(href="#").archiv__title Create Contact Formular
+                            .archiv__col
+                                button(type="button").button.button--archiv Worlda
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
+                        li.archiv__item
+                            .archiv__col
+                                .archiv__progress 87%
+                                a(href="#").archiv__title Create Contact Formular
+                            .archiv__col
+                                button(type="button").button.button--archiv Worlda
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
+                        li.archiv__item
+                            .archiv__col
+                                .archiv__progress 87%
+                                a(href="#").archiv__title Create Contact Formular
+                            .archiv__col
+                                button(type="button").button.button--archiv Worlda
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#search")
+                                button(type="button").button.button--round
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-down")
                     .bottom
                         a.bottom__link(href="#") Project Archiv
                             svg.icon: use(xlink:href="assets/images/icons/sprite.svg#angle-arrow-pointing-to-right")
                 .activity
                     ul.team
                         li.team__item
-                            .team__avatar
+                            a.team__avatar.active(href="#" style="background-image: url('./assets/images/user-1.jpg');")
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                        li.team__item
+                            a.team__avatar(href="#" style="background-image: url('./assets/images/user-2.jpg');")
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                        li.team__item
+                            a.team__avatar.active(href="#" style="background-image: url('./assets/images/user-3.jpg');")
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                        li.team__item
+                            a.team__avatar(href="#" style="background-image: url('./assets/images/user-1.jpg');")
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                        li.team__item
+                            a.team__avatar.active(href="#" style="background-image: url('./assets/images/user-2.jpg');")
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                        li.team__item
+                            a.team__avatar(href="#" style="background-image: url('./assets/images/user-3.jpg');")
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                        li.team__item
+                            a.team__avatar.active(href="#" style="background-image: url('./assets/images/user-1.jpg');")
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                        li.team__item
+                            a.team__avatar(href="#" style="background-image: url('./assets/images/user-2.jpg');")
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                        li.team__item
+                            a.team__avatar.active(href="#" style="background-image: url('./assets/images/user-3.jpg');")
+                            .team__content
+                                .team__info Mark P.
+                                    span add an Image into Wordla
+                                .team__date today, 10:30 PM
+                        li.team__item
+                            a.team__avatar(href="#" style="background-image: url('./assets/images/user-1.jpg');")
                             .team__content
                                 .team__info Mark P.
                                     span add an Image into Wordla
