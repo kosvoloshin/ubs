@@ -5,39 +5,15 @@ html, body {
     padding: 0;
     font-size: 14px;
     line-height: 1.42;
-    font-family: $font;
-    color: $text;
-    background-color: $bg_color;
+    // font-family: $font;
+    // color: $text;
+    // background-color: $bg_color;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
-}
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-input[type="number"],
-input[type="search"] {
-  -webkit-appearance: none;
-  -webkit-appearance: textfield; 
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; 
 }
 
 .visuallyhidden {
