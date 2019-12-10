@@ -6,14 +6,21 @@ $--md: 1023px; //max-width: 1023px;
 $--sm: 767px; //max-width: 767px
 $--xs: 480px; //max-width: 479px;
 
-/* // Colors
+// Colors
 $w: #ffffff;
 $b: #000000;
-$text: #4b4b4b;
-$bg_color: #f1f1f1;
-$grey: #adadad;
-$link: #ff503f;
-$bd_color: #d3d7da;
+$bg_blue: #f0f9fc;
+$bg_dark: #155d8a;
+$text: #02546e;
+$text_light: #777777;
+$text_dark: #002936;
+$text_link: #d3bda0;
+$text_link2: #c1b191;
 
 // Fonts
-$font: 'Freight'; */
+$r: "Roboto";
+$rb: "RobotoBold";
+$rm: "RobotoMedium";
+$fm: "FiraSansMedium";
+$fsb: "FiraSansSemiBold";
+$fb: "FiraSansBold";

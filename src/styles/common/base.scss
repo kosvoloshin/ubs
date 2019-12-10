@@ -1,25 +1,29 @@
-html, body {
+html,
+body {
     width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
     font-size: 14px;
-    line-height: 1.42;
-    // font-family: $font;
-    // color: $text;
-    // background-color: $bg_color;
+    font-family: $r;
+    color: $text;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+html {
+    line-height: 1.42;
+    background-image: linear-gradient(179deg, #00516a 11%, #357589 45%, #ffffff 132%);
+}
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 .visuallyhidden {
     position: absolute;
-    width: 1px!important;
-    height: 1px!important;
+    width: 1px !important;
+    height: 1px !important;
     margin: -1px;
     border: 0;
     padding: 0;

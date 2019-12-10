@@ -1,0 +1,51 @@
+.header {
+    padding: rem(32px) 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+}
+
+.menu__item {
+    margin-right: rem(20px);
+}
+
+.menu__link {
+    font-family: $fm;
+    font-size: rem(12px);
+    font-weight: 500;
+    font-style: normal;
+    line-height: em(14/12);
+    letter-spacing: normal;
+    color: $text_link;
+    text-transform: uppercase;
+    transition: 0.2s;
+
+    &:hover {
+        color: lighten($color: $text_link, $amount: 10);
+    }
+}
+
+.logout {
+    & .icon {
+        height: rem(18px);
+        width: rem(18px);
+        fill: $text_link;
+    }
+}

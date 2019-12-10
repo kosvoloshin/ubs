@@ -1,0 +1,60 @@
+.start {
+    position: relative;
+}
+
+.start__row--bg {
+    background-image: url("../images/start-bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: rem(208px) 0 rem(175px) 0;
+}
+
+.start__title {
+    font-family: $fm;
+    font-size: rem(48px);
+    font-weight: bold;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $text_link2;
+}
+
+.start__subtitle {
+    font-family: $fsb;
+    font-size: rem(22px);
+    font-weight: 600;
+    font-style: normal;
+    line-height: em(32/22);
+    letter-spacing: normal;
+    color: $text_link2;
+    margin-top: em(28/22);
+}
+
+.slider {
+    background-color: #fff;
+    padding: rem(33px) 0 rem(101px) 0;
+}
+
+.slider__slogan {
+    font-family: $fsb;
+    font-size: rem(22px);
+    font-weight: 600;
+    font-style: normal;
+    line-height: em(32/22);
+    letter-spacing: normal;
+    color: $text;
+    margin-bottom: rem(33px);
+}
+
+.slider__list {
+    display: flex;
+    overflow: hidden;
+}
+
+.start__abs-img {
+    position: absolute;
+    bottom: -2px;
+    right: rem(61px);
+}

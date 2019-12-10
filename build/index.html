@@ -13,44 +13,63 @@
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <div class="header__logo"></div>
-          <div class="header__menu menu">
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="#">item 1</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 2</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 3</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 4</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 5</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 6</a></li>
-            </ul>
-            <button class="logout" type="button"></button>
+          <div class="header__wrap">
+            <div class="header__logo"><img src="./assets/images/logo.png" alt="logo"></div>
+            <div class="header__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="#">ABOUT US</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">C2B ACCOUNTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">B2B ACCOUNTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">ACCOUNTS FOR SALE</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">AVAILABLE ACCOUNTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">CONTACTS</a></li>
+              </ul>
+              <button class="logout" type="button">
+                <svg class="icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#logout"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </header>
       <section class="section start">
-        <h1 class="visuallyhidden">Section Title</h1>
-        <div class="container">
-          <div class="start__row">
-            <div class="start__title">Lorem ipsum</div>
-            <div class="start__subtitle">lorem ipsum dolor sit amet</div>
+        <h1 class="visuallyhidden">section title</h1>
+        <div class="start__row start__row--bg">
+          <div class="container">
+            <div class="start__title">Serviced C2B, B2B accounts <br>and bank accounts for sale</div>
+            <div class="start__subtitle">For Every Requirements and Taste!</div>
           </div>
         </div>
         <div class="start__row slider">
-          <div class="slider__slogan">lorem ipsum</div>
+          <div class="container">
+            <div class="slider__slogan">We work with:</div>
+          </div>
           <ul class="slider__list">
-            <li class="slider__item"></li>
+            <li class="slider__item"><img src="./assets/images/slider/slider-1.png" alt="slider-image"></li>
+            <li class="slider__item"><img src="./assets/images/slider/slider-2.png" alt="slider-image"></li>
+            <li class="slider__item"><img src="./assets/images/slider/slider-3.png" alt="slider-image"></li>
+            <li class="slider__item"><img src="./assets/images/slider/slider-4.png" alt="slider-image"></li>
+            <li class="slider__item"><img src="./assets/images/slider/slider-5.png" alt="slider-image"></li>
+            <li class="slider__item"><img src="./assets/images/slider/slider-6.png" alt="slider-image"></li>
+            <li class="slider__item"><img src="./assets/images/slider/slider-7.png" alt="slider-image"></li>
+            <li class="slider__item"><img src="./assets/images/slider/slider-8.png" alt="slider-image"></li>
+            <li class="slider__item"><img src="./assets/images/slider/slider-9.png" alt="slider-image"></li>
           </ul>
         </div>
+        <div class="start__abs-img"><img src="./assets/images/man.png"></div>
       </section>
       <section class="section section--blue">
         <div class="container">
-          <div class="section__col">
-            <h1 class="section__title">About us</h1>
-            <div class="section__description">
-              <p>lorem ipsum</p>
+          <div class="section__row">
+            <div class="section__col">
+              <h1 class="section__title">About us</h1>
+              <div class="section__description">
+                <p>The company was established in 2017. The main direction of the company is the providing of bank accounts for business with payment processing and support of accounts. The company employs former bank managers, lawyers, and professional IT specialists, which allows us to always be one step ahead of banks and maintain bank accounts as professionally as possible. Our experience and connections in banks allow us to open accounts in more than 30 banks and in more than 20 countries. You can be sure that we always have a ready account for the needs of your business, and our experts will always advise the most suitable option for you. In particular, we offer the best conditions for servicing and selling accounts for high-risk businesses. Over the three years of operation, we have opened more than 700 bank accounts, and more than 30 customers have been satisfied with us.</p>
+              </div>
             </div>
+            <div class="section__col"><img class="section__image" src="./assets/images/about.png" alt="section-image"></div>
           </div>
-          <div class="section__col"></div>
         </div>
       </section>
       <section class="section section--dark services">

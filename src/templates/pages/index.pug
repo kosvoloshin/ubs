@@ -5,45 +5,48 @@ block variables
 
 block content
     .wrapper
-        header.header
-            .container
-                .header__logo
-                    //- img(src="" alt="logo")
-                .header__menu.menu
-                    ul.menu__list
-                        li.menu__item
-                            a.menu__link(href="#") item 1
-                        li.menu__item
-                            a.menu__link(href="#") item 2
-                        li.menu__item
-                            a.menu__link(href="#") item 3
-                        li.menu__item
-                            a.menu__link(href="#") item 4
-                        li.menu__item
-                            a.menu__link(href="#") item 5
-                        li.menu__item
-                            a.menu__link(href="#") item 6
-                    button.logout(type="button")
+        include ../common/header.pug
         section.section.start
-            h1.visuallyhidden Section Title
-            .container
-                .start__row
-                    .start__title Lorem ipsum
-                    .start__subtitle lorem ipsum dolor sit amet
+            h1.visuallyhidden section title
+            .start__row.start__row--bg
+                .container
+                    .start__title Serviced C2B, B2B accounts 
+                        br
+                        | and bank accounts for sale
+                    .start__subtitle For Every Requirements and Taste!
             .start__row.slider
-                .slider__slogan lorem ipsum
+                .container
+                    .slider__slogan We work with:
                 ul.slider__list
                     li.slider__item
-                        //- img(src="" alt="slider-image")
-            //- .start__abs-img
+                        img(src="./assets/images/slider/slider-1.png" alt="slider-image")
+                    li.slider__item
+                        img(src="./assets/images/slider/slider-2.png" alt="slider-image")
+                    li.slider__item
+                        img(src="./assets/images/slider/slider-3.png" alt="slider-image")
+                    li.slider__item
+                        img(src="./assets/images/slider/slider-4.png" alt="slider-image")
+                    li.slider__item
+                        img(src="./assets/images/slider/slider-5.png" alt="slider-image")
+                    li.slider__item
+                        img(src="./assets/images/slider/slider-6.png" alt="slider-image")
+                    li.slider__item
+                        img(src="./assets/images/slider/slider-7.png" alt="slider-image")
+                    li.slider__item
+                        img(src="./assets/images/slider/slider-8.png" alt="slider-image")
+                    li.slider__item
+                        img(src="./assets/images/slider/slider-9.png" alt="slider-image")
+            .start__abs-img
+                img(src="./assets/images/man.png")
         section.section.section--blue
             .container
-                .section__col
-                    h1.section__title About us
-                    .section__description
-                        p lorem ipsum
-                .section__col
-                    //- img.section__image(src="" alt="section-image")
+                .section__row
+                    .section__col
+                        h1.section__title About us
+                        .section__description
+                            p The company was established in 2017. The main direction of the company is the providing of bank accounts for business with payment processing and support of accounts. The company employs former bank managers, lawyers, and professional IT specialists, which allows us to always be one step ahead of banks and maintain bank accounts as professionally as possible. Our experience and connections in banks allow us to open accounts in more than 30 banks and in more than 20 countries. You can be sure that we always have a ready account for the needs of your business, and our experts will always advise the most suitable option for you. In particular, we offer the best conditions for servicing and selling accounts for high-risk businesses. Over the three years of operation, we have opened more than 700 bank accounts, and more than 30 customers have been satisfied with us.
+                    .section__col
+                        img.section__image(src="./assets/images/about.png" alt="section-image")
         section.section.section--dark.services
             .container
                 .services__line
@@ -120,31 +123,4 @@ block content
                                 textarea.form__textarea(placeholder="Your Message")
                         .form__row
                             button.form__submit(type="submit") submit
-        footer.footer
-            .container
-                .footer__col
-                    .footer__logo
-                        //- img(src="" alt="footer-logo")
-                .footer__col
-                    .footer__menu-col
-                        ul.footer__menu-list
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                    .footer__menu-col
-                        ul.footer__menu-list
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                    .footer__menu-col
-                        ul.footer__menu-list
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
+        include ../common/footer.pug
