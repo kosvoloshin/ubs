@@ -8,21 +8,22 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="container">
           <div class="header__wrap">
-            <div class="header__logo"><img src="./assets/images/logo.png" alt="logo"></div>
+            <div class="header__logo"><a href="/"><img src="./assets/images/logo.png" alt="logo"></a></div>
             <div class="header__menu menu">
               <ul class="menu__list">
-                <li class="menu__item"><a class="menu__link" href="#">ABOUT US</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">C2B ACCOUNTS</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">B2B ACCOUNTS</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">ACCOUNTS FOR SALE</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">AVAILABLE ACCOUNTS</a></li>
-                <li class="menu__item"><a class="menu__link" href="#">CONTACTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="#about" data-anchor="true">ABOUT US</a></li>
+                <li class="menu__item"><a class="menu__link" href="#c2b" data-anchor="true">C2B ACCOUNTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="#b2b" data-anchor="true">B2B ACCOUNTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="#sale" data-anchor="true">ACCOUNTS FOR SALE</a></li>
+                <li class="menu__item"><a class="menu__link" href="/accounts.html">AVAILABLE ACCOUNTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="#contacts" data-anchor="true">CONTACTS</a></li>
               </ul>
               <button class="logout" type="button">
                 <svg class="icon">
@@ -45,7 +46,7 @@
           <div class="container">
             <div class="slider__slogan">We work with:</div>
           </div>
-          <ul class="slider__list">
+          <ul class="slider__list" id="lightSlider">
             <li class="slider__item"><img src="./assets/images/slider/slider-1.png" alt="slider-image"></li>
             <li class="slider__item"><img src="./assets/images/slider/slider-2.png" alt="slider-image"></li>
             <li class="slider__item"><img src="./assets/images/slider/slider-3.png" alt="slider-image"></li>
@@ -56,159 +57,240 @@
             <li class="slider__item"><img src="./assets/images/slider/slider-8.png" alt="slider-image"></li>
             <li class="slider__item"><img src="./assets/images/slider/slider-9.png" alt="slider-image"></li>
           </ul>
+          <script>
+            jQuery(document).ready(function() {
+                var slider = jQuery('#lightSlider').lightSlider({
+                item:6,
+                autoWidth:true,
+                auto:true,
+                loop:true,
+                easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+                speed:1000,
+                    responsive : [
+                        {
+                            breakpoint:1800,
+                            settings: {
+                                item:5,
+                                slideMove:1,
+                                slideMargin:15,
+                            }
+                        },
+                        {
+                            breakpoint:1200,
+                            settings: {
+                                item:5,
+                                slideMove:1,
+                                slideMargin:15,
+                            }
+                        }
+                    ]
+                });
+            });
+          </script>
         </div>
-        <div class="start__abs-img"><img src="./assets/images/man.png"></div>
+        <div class="start__abs-img" data-scrolling="true"><img src="./assets/images/man.png"></div>
       </section>
-      <section class="section section--blue">
+      <section class="section section--blue section--padding" id="about" data-scrolling="true">
         <div class="container">
-          <div class="section__row">
-            <div class="section__col">
+          <div class="section__row section__row--center">
+            <div class="section__col section__col--text">
               <h1 class="section__title">About us</h1>
               <div class="section__description">
                 <p>The company was established in 2017. The main direction of the company is the providing of bank accounts for business with payment processing and support of accounts. The company employs former bank managers, lawyers, and professional IT specialists, which allows us to always be one step ahead of banks and maintain bank accounts as professionally as possible. Our experience and connections in banks allow us to open accounts in more than 30 banks and in more than 20 countries. You can be sure that we always have a ready account for the needs of your business, and our experts will always advise the most suitable option for you. In particular, we offer the best conditions for servicing and selling accounts for high-risk businesses. Over the three years of operation, we have opened more than 700 bank accounts, and more than 30 customers have been satisfied with us.</p>
               </div>
             </div>
-            <div class="section__col"><img class="section__image" src="./assets/images/about.png" alt="section-image"></div>
+            <div class="section__col section__col--img"><img class="section__image" src="./assets/images/about.png" alt="section-image"></div>
           </div>
         </div>
       </section>
-      <section class="section section--dark services">
+      <section class="section section--dark section--padding services" data-scrolling="true">
         <div class="container">
           <div class="services__line">
-            <h1 class="section__title">Our services</h1>
-            <div class="section__description">
-              <p>lorem ipsum services</p>
+            <h1 class="section__title section__title--light">Who are our services <br>ideal for?</h1>
+            <div class="section__description section__description--light">
+              <p>Our services can satisfy banking needs of the following areas:</p>
             </div>
           </div>
           <div class="services__line">
             <ul class="services__list">
               <li class="services__item">
-                <div class="services__image"></div>
-                <div class="services__title">lorem</div>
+                <div class="services__image"><img src="./assets/images/services/service-chart.png" alt="services-image"></div>
+                <div class="services__title">Forex</div>
+              </li>
+              <li class="services__item">
+                <div class="services__image"><img src="./assets/images/services/service-dice.png" alt="services-image"></div>
+                <div class="services__title">Online casino</div>
+              </li>
+              <li class="services__item">
+                <div class="services__image"><img src="./assets/images/services/service-crypto.png" alt="services-image"></div>
+                <div class="services__title">Crypto</div>
+              </li>
+              <li class="services__item">
+                <div class="services__image"><img src="./assets/images/services/service-pharma.png" alt="services-image"></div>
+                <div class="services__title">Pharmaceuticals</div>
+              </li>
+              <li class="services__item">
+                <div class="services__image"><img src="./assets/images/services/service-dating.png" alt="services-image"></div>
+                <div class="services__title">Dating services</div>
+              </li>
+              <li class="services__item">
+                <div class="services__image"><img src="./assets/images/services/service-partner.png" alt="services-image"></div>
+                <div class="services__title">Financial brokers</div>
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section class="section section--white">
+      <section class="section section--white section--padding" id="c2b" data-scrolling="true">
         <div class="container">
-          <div class="section__col">
-            <h1 class="section__title">C2B Accounts</h1>
-            <div class="section__description">
-              <p>lorem ipsum</p>
-            </div><a class="button" href="#">button</a>
-          </div>
-          <div class="section__col"></div>
-        </div>
-      </section>
-      <section class="section section--blue">
-        <div class="container">
-          <div class="section__col"></div>
-          <div class="section__col">
-            <h1 class="section__title">B2B Accounts</h1>
-            <div class="section__description">
-              <p>lorem ipsum</p>
-            </div><a class="button" href="#">button</a>
+          <div class="section__row section__row--center">
+            <div class="section__col section__col--text">
+              <h1 class="section__title">C2B Accounts</h1>
+              <div class="section__description">
+                <p>In today's world, a most of businesses use client-to-business payments, and in many cases it is necessary to observe the anonymity of the beneficiary of the business, due to the high-risk business lines. Over the many years of work, our specialists have learned to perfectly accept, process, and deliver payments to you from individuals, which will allow you to be sure that your money will be received by you in the shortest possible time and with the lowest risks. Forget about the hassle of opening, maintaining, and controlling of your C2B bank accounts. Having entrusted this to us, you will only have to think about where to spend your profit.</p>
+              </div><a class="button" href="#"><span>Choose c2b account</span>
+                <svg class="icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                </svg></a>
+            </div>
+            <div class="section__col section__col--img"><img class="section__image" src="./assets/images/c2b.png" alt="section-image"></div>
           </div>
         </div>
       </section>
-      <section class="section section--white">
+      <section class="section section--blue section--padding" id="b2b" data-scrolling="true">
         <div class="container">
-          <div class="section__col">
-            <h1 class="section__title">Accounts for sale</h1>
-            <div class="section__description">
-              <p>lorem ipsum</p>
-            </div><a class="button" href="#">button</a>
+          <div class="section__row section__row--center">
+            <div class="section__col section__col--img"><img class="section__image" src="./assets/images/b2b.png" alt="section-image"></div>
+            <div class="section__col section__col--text">
+              <h1 class="section__title">B2B Accounts</h1>
+              <div class="section__description">
+                <p>In order to open a corporate account in the EU bank and work successfully with it, you need to know thoroughly how the bank’s compliance departments work, as well as observe a huge number of unwritten bank conditions so that the bank processes your payments correctly and does not suspect that your activities are related to the high risk segment. If you want to make and accept payments from legal entities, aggregate funds, or you just need a transit account that will be operated by the best specialists, then you are where you need to. We can offer you the best European B2B accounts in the most reliable banks on the best conditions. And our professionals will be able to make working with such accounts simple and carefree.</p>
+              </div><a class="button" href="#"><span>Choose b2b account</span>
+                <svg class="icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                </svg></a>
+            </div>
           </div>
-          <div class="section__col"></div>
         </div>
       </section>
-      <section class="section section--blue contacts">
+      <section class="section section--white section--padding" id="sale" data-scrolling="true">
         <div class="container">
-          <div class="section__col section__col--dark">
-            <h1 class="section__title">Our contacts</h1>
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <div class="contacts__icon"></div>
-                <div class="contacts__data">lorem ipsum</div>
-              </li>
-              <li class="contacts__item">
-                <div class="contacts__icon"></div>
-                <div class="contacts__data">lorem ipsum</div>
-              </li>
-              <li class="contacts__item">
-                <div class="contacts__icon"></div>
-                <div class="contacts__data">lorem ipsum</div>
-              </li>
-            </ul>
+          <div class="section__row section__row--center">
+            <div class="section__col section__col--text">
+              <h1 class="section__title">Accounts for sale</h1>
+              <div class="section__description">
+                <p>Opening a business account in European banks is a very difficult task, especially recently. And if you are not a resident of a European country or your company is not registered in the EU, then with a high probability you can forget about opening an account.Since we have vast experience in opening bank accounts and numerous connections with European banks, we can save you the long, laborious and not always successful process of opening a bank account. Our experts will select and provide you with a European bank account with full access package, which only you will have access to.If you have enough experience in managing accounts, communicating with banks and you need maximum privacy, then buying a bank account is what you need.</p>
+              </div><a class="button" href="#"><span>Choose your account</span>
+                <svg class="icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#right-arrow"></use>
+                </svg></a>
+            </div>
+            <div class="section__col section__col--img"><img class="section__image" src="./assets/images/open-acc.png" alt="section-image"></div>
           </div>
-          <div class="section__col">
-            <div class="section__title">Send us message</div>
-            <form class="form">
-              <div class="form__row">
-                <label class="form__block">
-                  <div class="form__title">Name</div>
-                  <input class="form__input" type="text" placeholder="Name">
-                </label>
-                <label class="form__block">
-                  <div class="form__title">Name</div>
-                  <input class="form__input" type="text" placeholder="Name">
-                </label>
-              </div>
-              <div class="form__row">
-                <label class="form__block">
-                  <div class="form__title">Name</div>
-                  <input class="form__input" type="text" placeholder="Name">
-                </label>
-                <label class="form__block">
-                  <div class="form__title">Name</div>
-                  <input class="form__input" type="text" placeholder="Name">
-                </label>
-              </div>
-              <div class="form__row">
-                <label class="form__block">
-                  <div class="form__title">Name</div>
-                  <textarea class="form__textarea" placeholder="Your Message"></textarea>
-                </label>
-              </div>
-              <div class="form__row">
-                <button class="form__submit" type="submit">submit</button>
-              </div>
-            </form>
+        </div>
+      </section>
+      <section class="section section--blue contacts" id="contacts" data-scrolling="true">
+        <div class="container">
+          <div class="section__row">
+            <div class="section__col section__col--dark">
+              <h1 class="section__title section__title--light">Our contacts</h1>
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <div class="contacts__icon">
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#location"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__data">Marszałkowska 82, 00-517 <br>Warszawa, Poland</div>
+                </li>
+                <li class="contacts__item">
+                  <div class="contacts__icon">
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#prone"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__data"><a href="tel:+48225539780">+48 22 553 97 80</a><a href="tel:+48225539783">+48 22 553 97 83</a></div>
+                </li>
+                <li class="contacts__item">
+                  <div class="contacts__icon">
+                    <svg class="icon">
+                      <use xlink:href="assets/images/icons/sprite.svg#mail"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts__data"><a href="mailto:contact@mail.com">contact@mail.com</a></div>
+                </li>
+              </ul>
+            </div>
+            <div class="section__col">
+              <div class="section__title">Send us message</div>
+              <form class="form">
+                <div class="form__row">
+                  <label class="form__block">
+                    <div class="form__title">Name</div>
+                    <input class="form__input" type="text" placeholder="John">
+                  </label>
+                  <label class="form__block">
+                    <div class="form__title">Surname</div>
+                    <input class="form__input" type="text" placeholder="Doe">
+                  </label>
+                </div>
+                <div class="form__row">
+                  <label class="form__block">
+                    <div class="form__title">E-mail</div>
+                    <input class="form__input" type="email" placeholder="johndoe@mail.com">
+                  </label>
+                  <label class="form__block">
+                    <div class="form__title">Phone</div>
+                    <input class="form__input" type="number" placeholder="+1234567890">
+                  </label>
+                </div>
+                <div class="form__row">
+                  <label class="form__block">
+                    <div class="form__title">Message</div>
+                    <textarea class="form__textarea" placeholder="Your Message"></textarea>
+                  </label>
+                </div>
+                <div class="form__row">
+                  <button class="form__submit" type="submit">send</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
       <footer class="footer">
         <div class="container">
-          <div class="footer__col">
-            <div class="footer__logo"></div>
-          </div>
-          <div class="footer__col">
-            <div class="footer__menu-col">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-              </ul>
+          <div class="footer__row">
+            <div class="footer__col footer__col--left">
+              <div class="footer__logo"><a href="/"><img src="./assets/images/footer-logo.png" alt="footer-logo"></a></div>
+              <div class="footer__copy">©2017-2020. All rights reserved</div>
             </div>
-            <div class="footer__menu-col">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-              </ul>
-            </div>
-            <div class="footer__menu-col">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-              </ul>
+            <div class="footer__col footer__col--right">
+              <div class="footer__menu-col">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="#about" data-anchor="true">About us</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="#c2b" data-anchor="true">C2B accounts</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="#b2b" data-anchor="true">B2B accounts</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="#sale" data-anchor="true">Accounts for sale</a></li>
+                </ul>
+              </div>
+              <div class="footer__menu-col">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="/accounts.html">Available accounts</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="#contacts" data-anchor="true">Contact us</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="#">Log out</a></li>
+                </ul>
+              </div>
+              <div class="footer__menu-col">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="#"><img src="./assets/images/partner-logo.png" alt="partner-logo"></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </footer>
     </div>
     <script src="./assets/scripts/bundle.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </body>
 </html>

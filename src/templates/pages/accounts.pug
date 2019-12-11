@@ -7,70 +7,161 @@ block content
     .wrapper
         header.header
             .container
-                .header__logo
-                    //- img(src="" alt="logo")
-                .header__menu.menu
-                    ul.menu__list
-                        li.menu__item
-                            a.menu__link(href="#") item 1
-                        li.menu__item
-                            a.menu__link(href="#") item 2
-                        li.menu__item
-                            a.menu__link(href="#") item 3
-                        li.menu__item
-                            a.menu__link(href="#") item 4
-                        li.menu__item
-                            a.menu__link(href="#") item 5
-                        li.menu__item
-                            a.menu__link(href="#") item 6
-                    button.logout(type="button")
-        section.section
+                .header__wrap
+                    .header__logo
+                        a(href="/")
+                            img(src="./assets/images/logo.png" alt="logo")
+                    .header__menu.menu
+                        ul.menu__list
+                            li.menu__item
+                                a.menu__link(href="/index.html") ABOUT US
+                            li.menu__item
+                                a.menu__link(href="/index.html") C2B ACCOUNTS
+                            li.menu__item
+                                a.menu__link(href="/index.html") B2B ACCOUNTS
+                            li.menu__item
+                                a.menu__link(href="/index.html") ACCOUNTS FOR SALE
+                            li.menu__item
+                                a.menu__link(href="/index.html") AVAILABLE ACCOUNTS
+                            li.menu__item
+                                a.menu__link(href="/index.html") CONTACTS
+                        button.logout(type="button")
+                            svg.icon: use(xlink:href="assets/images/icons/sprite.svg#logout")
+        section.section.section--accounts
             .container
                 h1.section__title Available Accounts
-                .section__description lorem ipsum dolor
+                .section__description You can choose С2В and В2В accounts serviced by our 
+                    br
+                    | specialists, or you can purchase a personal private account.
                 .accounts
                     .accounts__title c2b accounts
                     .accounts__block
-                        table
-                            thead
-                                tr
-                                    th 1
-                                    th 2
-                                    th 3
-                            tbody
-                                tr
-                                    td 1
-                                    td 2
-                                    td 3
-                                tr
-                                    td 1
-                                    td 2
-                                    td 3
+                        table.table
+                            thead.table__head
+                                tr.table__row
+                                    th.table__col Account number
+                                    th.table__col Country
+                                    th.table__col Bank
+                            tbody.table__body
+                                tr.table__row
+                                    td.table__col PL32 21** **** **** **** **** 2102
+                                    td.table__col Poland
+                                    td.table__col Citi bank
+                                tr.table__row
+                                    td.table__col PL25 02** **** **** **** **** 1143
+                                    td.table__col Poland
+                                    td.table__col Millennium
+                                tr.table__row
+                                    td.table__col DE11 20** **** **** **** **** 4556
+                                    td.table__col Germany
+                                    td.table__col Commerzbank
+                                tr.table__row
+                                    td.table__col PT37 55** **** **** **** **** 5609
+                                    td.table__col Portugal
+                                    td.table__col Novobanco
+                                tr.table__row
+                                    td.table__col HR20 20** **** **** **** **** 4053
+                                    td.table__col Croatia
+                                    td.table__col Raiffaisen
+                                tr.table__row
+                                    td.table__col HR20 20** **** **** **** **** 4053
+                                    td.table__col Croatia
+                                    td.table__col Raiffaisen
+                    .accounts__title b2b accounts
+                    .accounts__block
+                        table.table
+                            thead.table__head
+                                tr.table__row
+                                    th.table__col Account number
+                                    th.table__col Country
+                                    th.table__col Bank
+                            tbody.table__body
+                                tr.table__row
+                                    td.table__col PL32 21** **** **** **** **** 2102
+                                    td.table__col Poland
+                                    td.table__col Citi bank
+                                tr.table__row
+                                    td.table__col PL25 02** **** **** **** **** 1143
+                                    td.table__col Poland
+                                    td.table__col Millennium
+                                tr.table__row
+                                    td.table__col DE11 20** **** **** **** **** 4556
+                                    td.table__col Germany
+                                    td.table__col Commerzbank
+                                tr.table__row
+                                    td.table__col PT37 55** **** **** **** **** 5609
+                                    td.table__col Portugal
+                                    td.table__col Novobanco
+                                tr.table__row
+                                    td.table__col HR20 20** **** **** **** **** 4053
+                                    td.table__col Croatia
+                                    td.table__col Raiffaisen
+                                tr.table__row
+                                    td.table__col HR20 20** **** **** **** **** 4053
+                                    td.table__col Croatia
+                                    td.table__col Raiffaisen
+                    .accounts__title accounts for sale
+                    .accounts__block
+                        table.table
+                            thead.table__head
+                                tr.table__row
+                                    th.table__col Account number
+                                    th.table__col Country
+                                    th.table__col Bank
+                            tbody.table__body
+                                tr.table__row
+                                    td.table__col PL32 21** **** **** **** **** 2102
+                                    td.table__col Poland
+                                    td.table__col Citi bank
+                                tr.table__row
+                                    td.table__col PL25 02** **** **** **** **** 1143
+                                    td.table__col Poland
+                                    td.table__col Millennium
+                                tr.table__row
+                                    td.table__col DE11 20** **** **** **** **** 4556
+                                    td.table__col Germany
+                                    td.table__col Commerzbank
+                                tr.table__row
+                                    td.table__col PT37 55** **** **** **** **** 5609
+                                    td.table__col Portugal
+                                    td.table__col Novobanco
+                                tr.table__row
+                                    td.table__col HR20 20** **** **** **** **** 4053
+                                    td.table__col Croatia
+                                    td.table__col Raiffaisen
+                                tr.table__row
+                                    td.table__col HR20 20** **** **** **** **** 4053
+                                    td.table__col Croatia
+                                    td.table__col Raiffaisen
         footer.footer
             .container
-                .footer__col
-                    .footer__logo
-                        //- img(src="" alt="footer-logo")
-                .footer__col
-                    .footer__menu-col
-                        ul.footer__menu-list
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                    .footer__menu-col
-                        ul.footer__menu-list
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
-                    .footer__menu-col
-                        ul.footer__menu-list
-                            li.footer__menu-item
-                                a.footer__menu-link(href="#") item
+                .footer__row
+                    .footer__col.footer__col--left
+                        .footer__logo
+                            a(href="/")
+                                img(src="./assets/images/footer-logo.png" alt="footer-logo")
+                        .footer__copy ©2017-2020. All rights reserved
+                    .footer__col.footer__col--right
+                        .footer__menu-col
+                            ul.footer__menu-list
+                                li.footer__menu-item
+                                    a.footer__menu-link(href="/index.html") About us
+                                li.footer__menu-item
+                                    a.footer__menu-link(href="/index.html") C2B accounts
+                                li.footer__menu-item
+                                    a.footer__menu-link(href="/index.html") B2B accounts
+                                li.footer__menu-item
+                                    a.footer__menu-link(href="/index.html") Accounts for sale
+                        .footer__menu-col
+                            ul.footer__menu-list
+                                li.footer__menu-item
+                                    a.footer__menu-link(href="/index.html") Available accounts
+                                li.footer__menu-item
+                                    a.footer__menu-link(href="/index.html") Contact us
+                                li.footer__menu-item
+                                    a.footer__menu-link(href="#") Log out
+                        .footer__menu-col
+                            ul.footer__menu-list
+                                li.footer__menu-item
+                                    a.footer__menu-link(href="#")
+                                        img(src="./assets/images/partner-logo.png" alt="partner-logo")

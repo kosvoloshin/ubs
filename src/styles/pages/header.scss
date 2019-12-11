@@ -5,6 +5,12 @@
     right: 0;
     top: 0;
     z-index: 1000;
+    transition: 0.2s;
+
+    &.fixed {
+        background-image: linear-gradient(to bottom, #00546e, #002c3a);
+        padding: rem(20px) 0;
+    }
 }
 
 .header__wrap {

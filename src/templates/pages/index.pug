@@ -17,7 +17,7 @@ block content
             .start__row.slider
                 .container
                     .slider__slogan We work with:
-                ul.slider__list
+                ul.slider__list#lightSlider
                     li.slider__item
                         img(src="./assets/images/slider/slider-1.png" alt="slider-image")
                     li.slider__item
@@ -36,91 +36,160 @@ block content
                         img(src="./assets/images/slider/slider-8.png" alt="slider-image")
                     li.slider__item
                         img(src="./assets/images/slider/slider-9.png" alt="slider-image")
-            .start__abs-img
+                script.
+                    jQuery(document).ready(function() {
+                        var slider = jQuery('#lightSlider').lightSlider({
+                        item:6,
+                        autoWidth:true,
+                        auto:true,
+                        loop:true,
+                        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+                        speed:1000,
+                            responsive : [
+                                {
+                                    breakpoint:1800,
+                                    settings: {
+                                        item:5,
+                                        slideMove:1,
+                                        slideMargin:15,
+                                    }
+                                },
+                                {
+                                    breakpoint:1200,
+                                    settings: {
+                                        item:5,
+                                        slideMove:1,
+                                        slideMargin:15,
+                                    }
+                                }
+                            ]
+                        });
+                    });
+            .start__abs-img(data-scrolling="true")
                 img(src="./assets/images/man.png")
-        section.section.section--blue
+        section.section.section--blue.section--padding#about(data-scrolling="true")
             .container
-                .section__row
-                    .section__col
+                .section__row.section__row--center
+                    .section__col.section__col--text
                         h1.section__title About us
                         .section__description
                             p The company was established in 2017. The main direction of the company is the providing of bank accounts for business with payment processing and support of accounts. The company employs former bank managers, lawyers, and professional IT specialists, which allows us to always be one step ahead of banks and maintain bank accounts as professionally as possible. Our experience and connections in banks allow us to open accounts in more than 30 banks and in more than 20 countries. You can be sure that we always have a ready account for the needs of your business, and our experts will always advise the most suitable option for you. In particular, we offer the best conditions for servicing and selling accounts for high-risk businesses. Over the three years of operation, we have opened more than 700 bank accounts, and more than 30 customers have been satisfied with us.
-                    .section__col
+                    .section__col.section__col--img
                         img.section__image(src="./assets/images/about.png" alt="section-image")
-        section.section.section--dark.services
+        section.section.section--dark.section--padding.services(data-scrolling="true")
             .container
                 .services__line
-                    h1.section__title Our services
-                    .section__description
-                        p lorem ipsum services
+                    h1.section__title.section__title--light Who are our services 
+                        br
+                        | ideal for?
+                    .section__description.section__description--light
+                        p Our services can satisfy banking needs of the following areas:
                 .services__line
                     ul.services__list
                         li.services__item
                             .services__image
-                                //- img(src="" alt="services-image")
-                            .services__title lorem
-        section.section.section--white
+                                img(src="./assets/images/services/service-chart.png" alt="services-image")
+                            .services__title Forex
+                        li.services__item
+                            .services__image
+                                img(src="./assets/images/services/service-dice.png" alt="services-image")
+                            .services__title Online casino
+                        li.services__item
+                            .services__image
+                                img(src="./assets/images/services/service-crypto.png" alt="services-image")
+                            .services__title Crypto
+                        li.services__item
+                            .services__image
+                                img(src="./assets/images/services/service-pharma.png" alt="services-image")
+                            .services__title Pharmaceuticals
+                        li.services__item
+                            .services__image
+                                img(src="./assets/images/services/service-dating.png" alt="services-image")
+                            .services__title Dating services
+                        li.services__item
+                            .services__image
+                                img(src="./assets/images/services/service-partner.png" alt="services-image")
+                            .services__title Financial brokers
+        section.section.section--white.section--padding#c2b(data-scrolling="true")
             .container
-                .section__col
-                    h1.section__title C2B Accounts
-                    .section__description
-                        p lorem ipsum
-                    a.button(href="#") button
-                .section__col
-                    //- img.section__image(src="" alt="section-image")
-        section.section.section--blue
+                .section__row.section__row--center
+                    .section__col.section__col--text
+                        h1.section__title C2B Accounts
+                        .section__description
+                            p In today's world, a most of businesses use client-to-business payments, and in many cases it is necessary to observe the anonymity of the beneficiary of the business, due to the high-risk business lines. Over the many years of work, our specialists have learned to perfectly accept, process, and deliver payments to you from individuals, which will allow you to be sure that your money will be received by you in the shortest possible time and with the lowest risks. Forget about the hassle of opening, maintaining, and controlling of your C2B bank accounts. Having entrusted this to us, you will only have to think about where to spend your profit.
+                        a.button(href="#")
+                            span Choose c2b account
+                            svg.icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                    .section__col.section__col--img
+                        img.section__image(src="./assets/images/c2b.png" alt="section-image")
+        section.section.section--blue.section--padding#b2b(data-scrolling="true")
             .container
-                .section__col
-                    //- img.section__image(src="" alt="section-image")
-                .section__col
-                    h1.section__title B2B Accounts
-                    .section__description
-                        p lorem ipsum
-                    a.button(href="#") button
-        section.section.section--white
+                .section__row.section__row--center
+                    .section__col.section__col--img
+                        img.section__image(src="./assets/images/b2b.png" alt="section-image")
+                    .section__col.section__col--text
+                        h1.section__title B2B Accounts
+                        .section__description
+                            p In order to open a corporate account in the EU bank and work successfully with it, you need to know thoroughly how the bank’s compliance departments work, as well as observe a huge number of unwritten bank conditions so that the bank processes your payments correctly and does not suspect that your activities are related to the high risk segment. If you want to make and accept payments from legal entities, aggregate funds, or you just need a transit account that will be operated by the best specialists, then you are where you need to. We can offer you the best European B2B accounts in the most reliable banks on the best conditions. And our professionals will be able to make working with such accounts simple and carefree.
+                        a.button(href="#")
+                            span Choose b2b account
+                            svg.icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+        section.section.section--white.section--padding#sale(data-scrolling="true")
             .container
-                .section__col
-                    h1.section__title Accounts for sale
-                    .section__description
-                        p lorem ipsum
-                    a.button(href="#") button
-                .section__col
-                    //- img.section__image(src="" alt="section-image")
-        section.section.section--blue.contacts
+                .section__row.section__row--center
+                    .section__col.section__col--text
+                        h1.section__title Accounts for sale
+                        .section__description
+                            p Opening a business account in European banks is a very difficult task, especially recently. And if you are not a resident of a European country or your company is not registered in the EU, then with a high probability you can forget about opening an account.Since we have vast experience in opening bank accounts and numerous connections with European banks, we can save you the long, laborious and not always successful process of opening a bank account. Our experts will select and provide you with a European bank account with full access package, which only you will have access to.If you have enough experience in managing accounts, communicating with banks and you need maximum privacy, then buying a bank account is what you need.
+                        a.button(href="#")
+                            span Choose your account
+                            svg.icon: use(xlink:href="assets/images/icons/sprite.svg#right-arrow")
+                    .section__col.section__col--img
+                        img.section__image(src="./assets/images/open-acc.png" alt="section-image")
+        section.section.section--blue.contacts#contacts(data-scrolling="true")
             .container
-                .section__col.section__col--dark
-                    h1.section__title Our contacts
-                    ul.contacts__list
-                        li.contacts__item
-                            .contacts__icon
-                            .contacts__data lorem ipsum
-                        li.contacts__item
-                            .contacts__icon
-                            .contacts__data lorem ipsum
-                        li.contacts__item
-                            .contacts__icon
-                            .contacts__data lorem ipsum
-                .section__col
-                    .section__title Send us message
-                    form.form
-                        .form__row
-                            label.form__block
-                                .form__title Name
-                                input.form__input(type="text" placeholder="Name")
-                            label.form__block
-                                .form__title Name
-                                input.form__input(type="text" placeholder="Name")
-                        .form__row
-                            label.form__block
-                                .form__title Name
-                                input.form__input(type="text" placeholder="Name")
-                            label.form__block
-                                .form__title Name
-                                input.form__input(type="text" placeholder="Name")
-                        .form__row
-                            label.form__block
-                                .form__title Name
-                                textarea.form__textarea(placeholder="Your Message")
-                        .form__row
-                            button.form__submit(type="submit") submit
+                .section__row
+                    .section__col.section__col--dark
+                        h1.section__title.section__title--light Our contacts
+                        ul.contacts__list
+                            li.contacts__item
+                                .contacts__icon
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#location")
+                                .contacts__data Marszałkowska 82, 00-517 
+                                    br
+                                    | Warszawa, Poland
+                            li.contacts__item
+                                .contacts__icon
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#prone")
+                                .contacts__data
+                                    a(href="tel:+48225539780") +48 22 553 97 80
+                                    a(href="tel:+48225539783") +48 22 553 97 83
+                            li.contacts__item
+                                .contacts__icon
+                                    svg.icon: use(xlink:href="assets/images/icons/sprite.svg#mail")
+                                .contacts__data
+                                    a(href="mailto:contact@mail.com") contact@mail.com
+                    .section__col
+                        .section__title Send us message
+                        form.form
+                            .form__row
+                                label.form__block
+                                    .form__title Name
+                                    input.form__input(type="text" placeholder="John")
+                                label.form__block
+                                    .form__title Surname
+                                    input.form__input(type="text" placeholder="Doe")
+                            .form__row
+                                label.form__block
+                                    .form__title E-mail
+                                    input.form__input(type="email" placeholder="johndoe@mail.com")
+                                label.form__block
+                                    .form__title Phone
+                                    input.form__input(type="number" placeholder="+1234567890")
+                            .form__row
+                                label.form__block
+                                    .form__title Message
+                                    textarea.form__textarea(placeholder="Your Message")
+                            .form__row
+                                button.form__submit(type="submit") send
         include ../common/footer.pug

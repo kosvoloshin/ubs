@@ -1,28 +1,32 @@
 footer.footer
     .container
-        .footer__col
-            .footer__logo
-                //- img(src="" alt="footer-logo")
-        .footer__col
-            .footer__menu-col
-                ul.footer__menu-list
-                    li.footer__menu-item
-                        a.footer__menu-link(href="#") item
-                    li.footer__menu-item
-                        a.footer__menu-link(href="#") item
-                    li.footer__menu-item
-                        a.footer__menu-link(href="#") item
-                    li.footer__menu-item
-                        a.footer__menu-link(href="#") item
-            .footer__menu-col
-                ul.footer__menu-list
-                    li.footer__menu-item
-                        a.footer__menu-link(href="#") item
-                    li.footer__menu-item
-                        a.footer__menu-link(href="#") item
-                    li.footer__menu-item
-                        a.footer__menu-link(href="#") item
-            .footer__menu-col
-                ul.footer__menu-list
-                    li.footer__menu-item
-                        a.footer__menu-link(href="#") item
+        .footer__row
+            .footer__col.footer__col--left
+                .footer__logo
+                    a(href="/")
+                        img(src="./assets/images/footer-logo.png" alt="footer-logo")
+                .footer__copy ©2017-2020. All rights reserved
+            .footer__col.footer__col--right
+                .footer__menu-col
+                    ul.footer__menu-list
+                        li.footer__menu-item
+                            a.footer__menu-link(href="#about" data-anchor="true") About us
+                        li.footer__menu-item
+                            a.footer__menu-link(href="#c2b" data-anchor="true") C2B accounts
+                        li.footer__menu-item
+                            a.footer__menu-link(href="#b2b" data-anchor="true") B2B accounts
+                        li.footer__menu-item
+                            a.footer__menu-link(href="#sale" data-anchor="true") Accounts for sale
+                .footer__menu-col
+                    ul.footer__menu-list
+                        li.footer__menu-item
+                            a.footer__menu-link(href="/accounts.html") Available accounts
+                        li.footer__menu-item
+                            a.footer__menu-link(href="#contacts" data-anchor="true") Contact us
+                        li.footer__menu-item
+                            a.footer__menu-link(href="#") Log out
+                .footer__menu-col
+                    ul.footer__menu-list
+                        li.footer__menu-item
+                            a.footer__menu-link(href="#")
+                                img(src="./assets/images/partner-logo.png" alt="partner-logo")

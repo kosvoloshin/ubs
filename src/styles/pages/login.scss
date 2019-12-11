@@ -1,3 +1,64 @@
 .login {
     background-image: linear-gradient(to bottom, #002936, #005670), linear-gradient(to bottom, #002936, #005670);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__block {
+    max-width: 315px;
+}
+
+.login__form {
+    padding-top: rem(50px);
+    text-align: center;
+}
+
+.login__input {
+    background-color: rgba(216, 216, 216, 0.41);
+    padding: em(14/14) em(15/14);
+    padding-left: em(68/14);
+    width: 100%;
+    border: none;
+    font-family: $fb;
+    font-size: rem(14px);
+    text-transform: uppercase;
+    color: $w;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 5% center;
+    filter: brightness(0) invert(1);
+
+    &::placeholder {
+        color: rgba($color: $w, $alpha: 0.3);
+    }
+
+    & + .login__input {
+        margin-top: 14px;
+    }
+
+    &.user {
+        background-image: url(../images/username.png);
+    }
+
+    &.password {
+        background-image: url(../images/password.png);
+    }
+}
+
+.login__button {
+    margin-top: em(45/14);
+    font-family: $fb;
+    font-size: rem(14px);
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #002936;
+    background-color: $w;
+    border-radius: em(8/14);
+    padding: em(13/14) em(42/14);
+    text-transform: uppercase;
 }

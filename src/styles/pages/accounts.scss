@@ -1,0 +1,101 @@
+.section--accounts {
+    background-image: linear-gradient(179deg, #00516a 11%, #357589 45%, #ffffff 132%);
+    text-align: center;
+    padding: rem(160px);
+
+    .section__title {
+        font-size: rem(52px);
+        color: $w;
+
+        & + .section__description {
+            margin-top: em(28/22);
+        }
+    }
+
+    .section__description {
+        font-family: $fsb;
+        font-size: rem(22px);
+        font-weight: 600;
+        line-height: em(32/22);
+        color: $w;
+        margin-bottom: em(123/22);
+    }
+}
+
+.accounts__title {
+    font-family: $fb;
+    text-transform: uppercase;
+    font-size: rem(34px);
+    font-weight: bold;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $w;
+    margin-bottom: em(30/34);
+}
+
+.accounts__block {
+    margin-bottom: rem(57px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.table {
+    background-color: $w;
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    border-radius: rem(21px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.table__head {
+    & .table__col {
+        font-family: $fsb;
+        font-size: rem(22px);
+        font-weight: 600;
+        font-style: normal;
+        line-height: em(32/22);
+        letter-spacing: normal;
+        color: #002936;
+        padding: 1em;
+        border-bottom: 1px solid $bg_dark;
+    }
+}
+
+.table__body {
+    & .table__row:nth-child(odd) {
+        background-color: #efefef;
+    }
+}
+
+.table__col {
+    font-family: $rb;
+    font-size: rem(16px);
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #01436b;
+    padding: 1em;
+
+    &:first-child {
+        width: 42.3%;
+    }
+
+    &:nth-child(2) {
+        width: 28.9%;
+    }
+
+    &:last-child {
+        width: 28.8%;
+    }
+
+    & + .table__col {
+        border-left: 1px solid $bg_dark;
+    }
+}

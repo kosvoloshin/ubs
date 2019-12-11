@@ -2,20 +2,21 @@ header.header
     .container
         .header__wrap
             .header__logo
-                img(src="./assets/images/logo.png" alt="logo")
+                a(href="/")
+                    img(src="./assets/images/logo.png" alt="logo")
             .header__menu.menu
                 ul.menu__list
                     li.menu__item
-                        a.menu__link(href="#") ABOUT US
+                        a.menu__link(href="#about" data-anchor="true") ABOUT US
                     li.menu__item
-                        a.menu__link(href="#") C2B ACCOUNTS
+                        a.menu__link(href="#c2b" data-anchor="true") C2B ACCOUNTS
                     li.menu__item
-                        a.menu__link(href="#") B2B ACCOUNTS
+                        a.menu__link(href="#b2b" data-anchor="true") B2B ACCOUNTS
                     li.menu__item
-                        a.menu__link(href="#") ACCOUNTS FOR SALE
+                        a.menu__link(href="#sale" data-anchor="true") ACCOUNTS FOR SALE
                     li.menu__item
-                        a.menu__link(href="#") AVAILABLE ACCOUNTS
+                        a.menu__link(href="/accounts.html") AVAILABLE ACCOUNTS
                     li.menu__item
-                        a.menu__link(href="#") CONTACTS
+                        a.menu__link(href="#contacts" data-anchor="true") CONTACTS
                 button.logout(type="button")
                     svg.icon: use(xlink:href="assets/images/icons/sprite.svg#logout")

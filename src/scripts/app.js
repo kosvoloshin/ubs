@@ -1,1 +1,4 @@
-// require('./common/...');
+require("./common/header");
+require("./common/anchor");
+require("./common/lightSlider");
+require("./common/scrollingBlock");

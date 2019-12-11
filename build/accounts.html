@@ -8,50 +8,165 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <div class="header__logo"></div>
-          <div class="header__menu menu">
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__link" href="#">item 1</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 2</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 3</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 4</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 5</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">item 6</a></li>
-            </ul>
-            <button class="logout" type="button"></button>
+          <div class="header__wrap">
+            <div class="header__logo"><a href="/"><img src="./assets/images/logo.png" alt="logo"></a></div>
+            <div class="header__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/index.html">ABOUT US</a></li>
+                <li class="menu__item"><a class="menu__link" href="/index.html">C2B ACCOUNTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="/index.html">B2B ACCOUNTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="/index.html">ACCOUNTS FOR SALE</a></li>
+                <li class="menu__item"><a class="menu__link" href="/index.html">AVAILABLE ACCOUNTS</a></li>
+                <li class="menu__item"><a class="menu__link" href="/index.html">CONTACTS</a></li>
+              </ul>
+              <button class="logout" type="button">
+                <svg class="icon">
+                  <use xlink:href="assets/images/icons/sprite.svg#logout"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </header>
-      <section class="section">
+      <section class="section section--accounts">
         <div class="container">
           <h1 class="section__title">Available Accounts</h1>
-          <div class="section__description">lorem ipsum dolor</div>
+          <div class="section__description">You can choose С2В and В2В accounts serviced by our <br>specialists, or you can purchase a personal private account.</div>
           <div class="accounts">
             <div class="accounts__title">c2b accounts</div>
             <div class="accounts__block">
-              <table>
-                <thead>
-                  <tr>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
+              <table class="table">
+                <thead class="table__head">
+                  <tr class="table__row">
+                    <th class="table__col">Account number</th>
+                    <th class="table__col">Country</th>
+                    <th class="table__col">Bank</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <td class="table__col">PL32 21** **** **** **** **** 2102</td>
+                    <td class="table__col">Poland</td>
+                    <td class="table__col">Citi bank</td>
                   </tr>
-                  <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
+                  <tr class="table__row">
+                    <td class="table__col">PL25 02** **** **** **** **** 1143</td>
+                    <td class="table__col">Poland</td>
+                    <td class="table__col">Millennium</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">DE11 20** **** **** **** **** 4556</td>
+                    <td class="table__col">Germany</td>
+                    <td class="table__col">Commerzbank</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">PT37 55** **** **** **** **** 5609</td>
+                    <td class="table__col">Portugal</td>
+                    <td class="table__col">Novobanco</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">HR20 20** **** **** **** **** 4053</td>
+                    <td class="table__col">Croatia</td>
+                    <td class="table__col">Raiffaisen</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">HR20 20** **** **** **** **** 4053</td>
+                    <td class="table__col">Croatia</td>
+                    <td class="table__col">Raiffaisen</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="accounts__title">b2b accounts</div>
+            <div class="accounts__block">
+              <table class="table">
+                <thead class="table__head">
+                  <tr class="table__row">
+                    <th class="table__col">Account number</th>
+                    <th class="table__col">Country</th>
+                    <th class="table__col">Bank</th>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <td class="table__col">PL32 21** **** **** **** **** 2102</td>
+                    <td class="table__col">Poland</td>
+                    <td class="table__col">Citi bank</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">PL25 02** **** **** **** **** 1143</td>
+                    <td class="table__col">Poland</td>
+                    <td class="table__col">Millennium</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">DE11 20** **** **** **** **** 4556</td>
+                    <td class="table__col">Germany</td>
+                    <td class="table__col">Commerzbank</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">PT37 55** **** **** **** **** 5609</td>
+                    <td class="table__col">Portugal</td>
+                    <td class="table__col">Novobanco</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">HR20 20** **** **** **** **** 4053</td>
+                    <td class="table__col">Croatia</td>
+                    <td class="table__col">Raiffaisen</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">HR20 20** **** **** **** **** 4053</td>
+                    <td class="table__col">Croatia</td>
+                    <td class="table__col">Raiffaisen</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="accounts__title">accounts for sale</div>
+            <div class="accounts__block">
+              <table class="table">
+                <thead class="table__head">
+                  <tr class="table__row">
+                    <th class="table__col">Account number</th>
+                    <th class="table__col">Country</th>
+                    <th class="table__col">Bank</th>
+                  </tr>
+                </thead>
+                <tbody class="table__body">
+                  <tr class="table__row">
+                    <td class="table__col">PL32 21** **** **** **** **** 2102</td>
+                    <td class="table__col">Poland</td>
+                    <td class="table__col">Citi bank</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">PL25 02** **** **** **** **** 1143</td>
+                    <td class="table__col">Poland</td>
+                    <td class="table__col">Millennium</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">DE11 20** **** **** **** **** 4556</td>
+                    <td class="table__col">Germany</td>
+                    <td class="table__col">Commerzbank</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">PT37 55** **** **** **** **** 5609</td>
+                    <td class="table__col">Portugal</td>
+                    <td class="table__col">Novobanco</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">HR20 20** **** **** **** **** 4053</td>
+                    <td class="table__col">Croatia</td>
+                    <td class="table__col">Raiffaisen</td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__col">HR20 20** **** **** **** **** 4053</td>
+                    <td class="table__col">Croatia</td>
+                    <td class="table__col">Raiffaisen</td>
                   </tr>
                 </tbody>
               </table>
@@ -61,35 +176,37 @@
       </section>
       <footer class="footer">
         <div class="container">
-          <div class="footer__col">
-            <div class="footer__logo"></div>
-          </div>
-          <div class="footer__col">
-            <div class="footer__menu-col">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-              </ul>
+          <div class="footer__row">
+            <div class="footer__col footer__col--left">
+              <div class="footer__logo"><a href="/"><img src="./assets/images/footer-logo.png" alt="footer-logo"></a></div>
+              <div class="footer__copy">©2017-2020. All rights reserved</div>
             </div>
-            <div class="footer__menu-col">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-              </ul>
-            </div>
-            <div class="footer__menu-col">
-              <ul class="footer__menu-list">
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">item</a></li>
-              </ul>
+            <div class="footer__col footer__col--right">
+              <div class="footer__menu-col">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="/index.html">About us</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="/index.html">C2B accounts</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="/index.html">B2B accounts</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="/index.html">Accounts for sale</a></li>
+                </ul>
+              </div>
+              <div class="footer__menu-col">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="/index.html">Available accounts</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="/index.html">Contact us</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="#">Log out</a></li>
+                </ul>
+              </div>
+              <div class="footer__menu-col">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item"><a class="footer__menu-link" href="#"><img src="./assets/images/partner-logo.png" alt="partner-logo"></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </footer>
     </div>
     <script src="./assets/scripts/bundle.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </body>
 </html>
