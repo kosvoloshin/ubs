@@ -3,10 +3,18 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    @include --sm {
+        display: block;
+    }
 }
 
 .section {
     flex-grow: 1;
+
+    @include --sm {
+        overflow: hidden;
+    }
 }
 
 .section.js-scrolled {
@@ -30,6 +38,18 @@
 
 .section--padding {
     padding: rem(120px) 0;
+
+    @include --lg {
+        padding: 100px 0;
+    }
+
+    @include --md {
+        padding: 80px 0;
+    }
+
+    @include --sm {
+        padding: 60px 0;
+    }
 }
 
 .section--blue {
@@ -57,10 +77,30 @@
 
     & + .section__description {
         margin-top: em(30/16);
+
+        @include --lg {
+            margin-top: 20px;
+        }
     }
 
     &--light {
         color: $w;
+    }
+
+    @include --lg {
+        font-size: 30px;
+    }
+
+    @include --md {
+        font-size: 26px;
+    }
+
+    @include --sm {
+        font-size: 24px;
+    }
+
+    @include --xs {
+        font-size: 20px;
     }
 }
 
@@ -79,14 +119,28 @@
 
     & + .button {
         margin-top: em(45/16);
+
+        @include --sm {
+            margin-top: 25px;
+        }
+    }
+
+    @include --md {
+        font-size: 15px;
+    }
+
+    @include --sm {
+        font-size: 14px;
     }
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1260px;
     margin: 0 auto;
     position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .section__row {
@@ -94,6 +148,14 @@
 
     &--center {
         align-items: center;
+
+        @include --sm {
+            align-items: flex-start;
+        }
+    }
+
+    @include --sm {
+        flex-direction: column;
     }
 }
 
@@ -103,25 +165,57 @@
 
     &--dark {
         position: relative;
+        z-index: 10;
         background-color: $bg_dark;
         &:before {
             content: "";
             position: absolute;
-            right: 100%;
+            right: 99%;
             top: 0;
             bottom: 0;
-            width: 100%;
+            width: 200%;
             background-color: inherit;
+            z-index: -1;
         }
+
+        @include --sm {
+            &:before {
+                left: 50%;
+                right: auto;
+                transform: translate(-50%, 0);
+            }
+        }
+    }
+
+    @include --sm {
+        width: 100%;
     }
 }
 
 .section__col--text {
     &:first-child {
         padding-right: rem(150px);
+
+        @include --lg {
+            padding-right: 30px;
+        }
+
+        @include --sm {
+            padding-right: 0;
+            padding-bottom: 30px;
+        }
     }
     &:last-child {
         padding-left: rem(85px);
+
+        @include --lg {
+            padding-left: 30px;
+        }
+
+        @include --sm {
+            padding-left: 0;
+            padding-bottom: 30px;
+        }
     }
 }
 
@@ -131,10 +225,36 @@
     &:first-child {
         padding-right: rem(85px);
         padding-left: 0;
+
+        @include --lg {
+            padding-right: 30px;
+        }
+
+        @include --sm {
+            padding-left: 30px;
+            order: 1;
+        }
     }
 
     &:last-child {
         padding-left: rem(85px);
+
+        @include --lg {
+            padding-left: 30px;
+        }
+
+        @include --lg {
+            padding-left: 30px;
+        }
+    }
+
+    & > img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @include --sm {
+        padding: 0 30px;
     }
 }
 
@@ -144,11 +264,45 @@
     &:first-child {
         width: 35.5%;
         padding-right: rem(60px);
+
+        @include --md {
+            padding-right: 30px;
+        }
+
+        @include --sm {
+            width: 100%;
+            padding-right: 0;
+            order: 1;
+        }
     }
 
     &:last-child {
         width: calc(100% - 35.5%);
         padding-left: rem(60px);
+
+        @include --md {
+            padding-left: 30px;
+        }
+
+        @include --sm {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+
+    @include --lg {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @include --md {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include --sm {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
 
@@ -183,5 +337,21 @@
         & .icon {
             fill: $text;
         }
+    }
+
+    @include --lg {
+        font-size: 13px;
+    }
+
+    @include --md {
+        font-size: 12px;
+    }
+
+    @include --sm {
+        font-size: 11px;
+    }
+
+    @include --xs {
+        font-size: 10px;
     }
 }

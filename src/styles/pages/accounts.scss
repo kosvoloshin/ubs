@@ -1,7 +1,7 @@
 .section--accounts {
     background-image: linear-gradient(179deg, #00516a 11%, #357589 45%, #ffffff 132%);
     text-align: center;
-    padding: rem(160px);
+    padding: rem(160px) 0;
 
     .section__title {
         font-size: rem(52px);
@@ -9,6 +9,22 @@
 
         & + .section__description {
             margin-top: em(28/22);
+        }
+
+        @include --lg {
+            font-size: 45px;
+        }
+
+        @include --md {
+            font-size: 38px;
+        }
+
+        @include --sm {
+            font-size: 32px;
+        }
+
+        @include --xs {
+            font-size: 24px;
         }
     }
 
@@ -19,6 +35,46 @@
         line-height: em(32/22);
         color: $w;
         margin-bottom: em(123/22);
+
+        @include --lg {
+            font-size: 20px;
+            margin-bottom: 80px;
+        }
+
+        @include --md {
+            font-size: 18px;
+            margin-bottom: 70px;
+        }
+
+        @include --sm {
+            font-size: 16px;
+            margin-bottom: 50px;
+        }
+
+        @include --sm {
+            font-size: 14px;
+            margin-bottom: 30px;
+
+            & br {
+                display: none;
+            }
+        }
+    }
+
+    @include --lg {
+        padding: 140px 0;
+    }
+
+    @include --md {
+        padding: 140px 0 120px 0;
+    }
+
+    @include --sm {
+        padding: 120px 0 80px 0;
+    }
+
+    @include --xs {
+        padding: 100px 0 60px 0;
     }
 }
 
@@ -33,6 +89,18 @@
     letter-spacing: normal;
     color: $w;
     margin-bottom: em(30/34);
+
+    @include --lg {
+        font-size: 30px;
+    }
+
+    @include --md {
+        font-size: 26px;
+    }
+
+    @include --sm {
+        font-size: 22px;
+    }
 }
 
 .accounts__block {
@@ -40,6 +108,18 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include --sm {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include --xs {
+        overflow-x: overlay;
     }
 }
 
@@ -50,6 +130,11 @@
     margin: 0 auto;
     border-radius: rem(21px);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+
+    @include --xs {
+        box-shadow: none;
+        min-width: 400px;
+    }
 }
 
 .table__head {
@@ -63,6 +148,16 @@
         color: #002936;
         padding: 1em;
         border-bottom: 1px solid $bg_dark;
+
+        @include --md {
+            font-size: 20px;
+            padding: 16px;
+        }
+
+        @include --sm {
+            font-size: 18px;
+            padding: 14px;
+        }
     }
 }
 
@@ -97,5 +192,14 @@
 
     & + .table__col {
         border-left: 1px solid $bg_dark;
+    }
+
+    @include --md {
+        font-size: 14px;
+    }
+
+    @include --sm {
+        font-size: 12px;
+        padding: 10px;
     }
 }

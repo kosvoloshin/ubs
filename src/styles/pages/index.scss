@@ -5,6 +5,22 @@
 .start__row--bg {
     background-image: linear-gradient(to bottom, #002c3a, #00546e);
     padding: rem(208px) 0 rem(175px) 0;
+
+    @include --lg {
+        padding: 178px 0 105px 0;
+    }
+
+    @include --md {
+        padding: 140px 0 80px 0;
+    }
+
+    @include --sm {
+        padding: 120px 0 60px 0;
+    }
+
+    @include --xs {
+        padding: 100px 0 60px 0;
+    }
 }
 
 .start__title {
@@ -16,6 +32,26 @@
     line-height: normal;
     letter-spacing: normal;
     color: $text_link2;
+
+    @include --lg {
+        font-size: 42px;
+    }
+
+    @include --md {
+        font-size: 36px;
+    }
+
+    @include --sm {
+        font-size: 30px;
+    }
+
+    @include --xs {
+        font-size: 20px;
+
+        & br {
+            display: none;
+        }
+    }
 }
 
 .start__subtitle {
@@ -27,11 +63,35 @@
     letter-spacing: normal;
     color: $text_link2;
     margin-top: em(28/22);
+
+    @include --lg {
+        font-size: 20px;
+    }
+
+    @include --md {
+        font-size: 18px;
+    }
+
+    @include --sm {
+        font-size: 16px;
+    }
 }
 
 .slider {
     background-color: #fff;
     padding: rem(33px) 0 rem(101px) 0;
+
+    @include --lg {
+        padding: rem(33px) 0 rem(70px) 0;
+    }
+
+    @include --md {
+        padding: 33px 0 55px 0;
+    }
+
+    @include --xs {
+        padding: 33px 0 45px 0;
+    }
 }
 
 .slider__slogan {
@@ -43,6 +103,19 @@
     letter-spacing: normal;
     color: $text;
     margin-bottom: rem(33px);
+
+    @include --lg {
+        font-size: 20px;
+    }
+
+    @include --md {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    @include --sm {
+        margin-bottom: 20px;
+    }
 }
 
 .slider__list {
@@ -55,6 +128,18 @@
 .slider__item > img {
     margin-left: rem(35px);
     margin-right: rem(35px);
+    transform: scale(0.85);
+
+    @include --md {
+        transform: scale(0.65);
+        margin: 0;
+    }
+
+    @include --xs {
+        margin-left: 20px;
+        margin-right: 20px;
+        transform: scale(0.75);
+    }
 }
 
 .start__abs-img {
@@ -62,6 +147,20 @@
     bottom: -2px;
     right: rem(61px);
     pointer-events: none;
+
+    & > img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @include --lg {
+        width: 50%;
+        right: 30px;
+    }
+
+    @include --sm {
+        display: none;
+    }
 }
 
 .services__line {
@@ -69,6 +168,10 @@
 
     &:last-child {
         padding-top: rem(26px);
+
+        @include --lg {
+            padding-top: 0;
+        }
     }
 }
 
@@ -80,6 +183,15 @@
 .services__item {
     width: calc(100% / 3);
     padding-top: rem(74px);
+
+    @include --md {
+        padding-top: 50px;
+    }
+
+    @include --sm {
+        width: 50%;
+        padding-top: 40px;
+    }
 }
 
 .services__title {
@@ -92,10 +204,18 @@
     letter-spacing: normal;
     color: $w;
     margin-top: em(12/16);
+
+    @include --xs {
+        font-size: 14px;
+    }
 }
 
 .contacts__list {
     padding-top: rem(60px);
+
+    @include --md {
+        padding-top: 35px;
+    }
 }
 
 .contacts__item {
@@ -106,6 +226,22 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include --md {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include --sm {
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .contacts__icon {
@@ -115,6 +251,15 @@
         height: rem(30px);
         width: rem(30px);
         fill: $w;
+
+        @include --md {
+            height: 25px;
+            width: 25px;
+        }
+    }
+
+    @include --lg {
+        margin-right: 18px;
     }
 }
 
@@ -135,6 +280,18 @@
             text-decoration: underline;
         }
     }
+
+    @include --lg {
+        font-size: 18px;
+
+        & > br {
+            display: none;
+        }
+    }
+
+    @include --md {
+        font-size: 16px;
+    }
 }
 
 .form {
@@ -148,6 +305,26 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    @include --lg {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include --md {
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include --xs {
+        flex-direction: column;
+    }
 }
 
 .form__block {
@@ -157,6 +334,31 @@
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @include --lg {
+        margin-right: 60px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @include --md {
+        margin-right: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    @include --xs {
+        margin-right: 0;
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -171,6 +373,10 @@
     color: #01436b;
     text-transform: uppercase;
     margin-bottom: em(7/14);
+
+    @include --md {
+        font-size: 13px;
+    }
 }
 
 .form__input {
@@ -207,4 +413,20 @@
     background-color: $w;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
     padding: em(16/14) em(60/14);
+
+    @include --lg {
+        font-size: 13px;
+    }
+
+    @include --md {
+        font-size: 12px;
+    }
+
+    @include --sm {
+        font-size: 11px;
+    }
+
+    @include --xs {
+        width: max-content;
+    }
 }
