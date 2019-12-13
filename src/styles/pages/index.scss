@@ -296,6 +296,7 @@
 
 .form {
     padding-top: rem(30px);
+    position: relative;
 }
 
 .form__row {
@@ -413,6 +414,12 @@
     background-color: $w;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
     padding: em(16/14) em(60/14);
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #3f5776;
+        color: $w;
+    }
 
     @include --lg {
         font-size: 13px;
@@ -428,5 +435,42 @@
 
     @include --xs {
         width: max-content;
+    }
+}
+
+.form__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: $fsb;
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #01436b;
+    background-color: $w;
+    box-shadow: 4px 7px 4px 0 rgba(0, 0, 0, 0.5);
+    border: solid 1px #e6e6e6;
+    display: flex;
+    align-items: center;
+    padding: em(45/22) em(71/22);
+
+    & > span {
+        display: inline-block;
+        width: max-content;
+        margin-left: em(10/22);
+    }
+
+    @include --lg {
+        font-size: 18px;
+    }
+
+    @include --xs {
+        font-size: 16px;
+        padding: 25px 30px;
     }
 }

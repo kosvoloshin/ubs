@@ -331,11 +331,12 @@
     }
 
     &:hover {
-        color: $text;
-        border-color: $text;
+        color: $w;
+        border-color: #3f5776;
+        background-color: #3f5776;
 
         & .icon {
-            fill: $text;
+            fill: $w;
         }
     }
 

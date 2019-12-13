@@ -67,8 +67,22 @@
     }
 }
 
+.login__fail {
+    font-family: $fsb;
+    font-size: rem(12px);
+    font-weight: 600;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #9f3f4a;
+    margin-top: em(13/12);
+}
+
 .login__button {
-    margin-top: em(45/14);
+    margin-top: em(15/14);
     font-family: $fb;
     font-size: rem(14px);
     font-weight: bold;
@@ -80,6 +94,12 @@
     border-radius: em(8/14);
     padding: em(13/14) em(42/14);
     text-transform: uppercase;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #f7efda;
+    }
 
     @include --xs {
         font-size: 12px;
