@@ -124,6 +124,8 @@
 }
 
 .slider__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -181,8 +183,15 @@
 }
 
 .services__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .services__item {
@@ -228,6 +237,8 @@
 }
 
 .contacts__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     align-items: flex-start;
     margin-bottom: rem(36px);
@@ -315,6 +326,8 @@
 }
 
 .form__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: rem(40px);
 
@@ -472,6 +485,8 @@
     background-color: $w;
     box-shadow: 4px 7px 4px 0 rgba(0, 0, 0, 0.5);
     border: solid 1px #e6e6e6;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     padding: em(45/22) em(71/22);

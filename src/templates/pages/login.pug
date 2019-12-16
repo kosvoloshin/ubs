@@ -11,7 +11,11 @@ block content
                     a(href="/")
                         img(src="./assets/images/login-logo.png" alt="logo")
                 form.login__form
-                    input.login__input.user(type="text" placeholder="username")
-                    input.login__input.password(type="password" placeholder="password")
+                    .login__row.user
+                        input.login__input(type="text" placeholder="USERNAME")
+                        svg.icon: use(xlink:href="assets/images/icons/sprite.svg#user")
+                    .login__row.password
+                        input.login__input(type="password" placeholder="PASSWORD")
+                        svg.icon: use(xlink:href="assets/images/icons/sprite.svg#key")
                     .login__fail.hide invalid login/password
                     button.login__button(type="submit") continue

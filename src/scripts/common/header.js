@@ -1,11 +1,7 @@
-window.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector(".header");
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 0) {
-            header.classList.add("fixed");
-        } else {
-            header.classList.remove("fixed");
-        }
-    });
+jQuery(window).scroll(function () {
+    if ($(this).scrollTop() > 0 ) {
+        $('.header').addClass("fixed");
+    } else {
+        $('.header').removeClass("fixed");
+    }
 });

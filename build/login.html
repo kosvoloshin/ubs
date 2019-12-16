@@ -16,8 +16,18 @@
         <div class="login__block">
           <div class="login__logo"><a href="/"><img src="./assets/images/login-logo.png" alt="logo"></a></div>
           <form class="login__form">
-            <input class="login__input user" type="text" placeholder="username">
-            <input class="login__input password" type="password" placeholder="password">
+            <div class="login__row user">
+              <input class="login__input" type="text" placeholder="USERNAME">
+              <svg class="icon">
+                <use xlink:href="assets/images/icons/sprite.svg#user"></use>
+              </svg>
+            </div>
+            <div class="login__row password">
+              <input class="login__input" type="password" placeholder="PASSWORD">
+              <svg class="icon">
+                <use xlink:href="assets/images/icons/sprite.svg#key"></use>
+              </svg>
+            </div>
             <div class="login__fail hide">invalid login/password</div>
             <button class="login__button" type="submit">continue</button>
           </form>
@@ -25,5 +35,7 @@
       </div>
     </div>
     <script src="./assets/scripts/bundle.js" defer></script>
+    <script src="./assets/scripts/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
   </body>
 </html>

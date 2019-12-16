@@ -35,6 +35,26 @@
     }
 }
 
+.login__row {
+    position: relative;
+    color: rgba($color: $w, $alpha: 0.3);
+    &:not(:first-child) {
+        margin-top: 14px;
+    }
+    & .icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 20px;
+        width: 20px;
+        fill: currentColor;
+    }
+    &.password .icon {
+        transform: translateY(-50%) rotate(52deg);
+    }
+}
+
 .login__input {
     background-color: rgba(216, 216, 216, 0.41);
     padding: em(14/14) em(15/14);
@@ -43,28 +63,14 @@
     border: none;
     font-family: $fb;
     font-size: rem(14px);
-    text-transform: uppercase;
     color: $w;
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: 5% center;
-    filter: brightness(0) invert(1);
 
     &::placeholder {
         color: rgba($color: $w, $alpha: 0.3);
     }
-
-    & + .login__input {
-        margin-top: 14px;
-    }
-
-    &.user {
-        background-image: url(../images/username.png);
-    }
-
-    &.password {
-        background-image: url(../images/password.png);
-    }
+}
+input:-internal-autofill-selected ~ .icon {
+    fill: $text_dark !important;
 }
 
 .login__fail {

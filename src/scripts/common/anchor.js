@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", function() {
     jQuery("[data-anchor=true]").on("click", function(event) {
         event.preventDefault();
 
