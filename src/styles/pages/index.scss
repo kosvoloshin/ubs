@@ -47,6 +47,7 @@
 
     @include --xs {
         font-size: 20px;
+        text-align: center;
 
         & br {
             display: none;
@@ -74,6 +75,10 @@
 
     @include --sm {
         font-size: 16px;
+    }
+
+    @include --xs {
+        text-align: center;
     }
 }
 
@@ -183,6 +188,8 @@
 .services__item {
     width: calc(100% / 3);
     padding-top: rem(74px);
+    opacity: 0;
+    transition: 0.3s;
 
     @include --md {
         padding-top: 50px;
@@ -212,6 +219,8 @@
 
 .contacts__list {
     padding-top: rem(60px);
+    opacity: 0;
+    transition: 0.3s;
 
     @include --md {
         padding-top: 35px;
@@ -241,6 +250,10 @@
         &:last-child {
             margin-bottom: 0;
         }
+    }
+
+    @include --xs {
+        padding-left: 25px;
     }
 }
 
@@ -297,6 +310,8 @@
 .form {
     padding-top: rem(30px);
     position: relative;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .form__row {
@@ -435,6 +450,8 @@
 
     @include --xs {
         width: max-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -458,6 +475,7 @@
     display: flex;
     align-items: center;
     padding: em(45/22) em(71/22);
+    z-index: 1000;
 
     & > span {
         display: inline-block;

@@ -20,19 +20,23 @@
 .section.js-scrolled {
     & .section__title {
         animation: fadeInUp 1s;
+        opacity: 1;
     }
 
     & .services__item {
         animation: fadeInUp 1s;
+        opacity: 1;
     }
     & .section__description,
-    & .section__form,
-    & .section__contacts__list {
+    & .form,
+    & .contacts__list {
         animation: fadeIn 1.8s;
+        opacity: 1;
     }
 
     & .section__image {
         animation: zoomIn 1s;
+        opacity: 1;
     }
 }
 
@@ -74,6 +78,8 @@
     letter-spacing: normal;
     color: $text;
     text-transform: uppercase;
+    opacity: 0;
+    transition: 0.3s;
 
     & + .section__description {
         margin-top: em(30/16);
@@ -101,6 +107,7 @@
 
     @include --xs {
         font-size: 20px;
+        text-align: center;
     }
 }
 
@@ -112,6 +119,8 @@
     font-stretch: normal;
     font-style: normal;
     letter-spacing: normal;
+    opacity: 0;
+    transition: 0.3s;
 
     &--light {
         color: $w;
@@ -202,7 +211,7 @@
 
         @include --sm {
             padding-right: 0;
-            padding-bottom: 30px;
+            padding-top: 30px;
         }
     }
     &:last-child {
@@ -214,7 +223,7 @@
 
         @include --sm {
             padding-left: 0;
-            padding-bottom: 30px;
+            padding-top: 30px;
         }
     }
 }
@@ -232,7 +241,6 @@
 
         @include --sm {
             padding-left: 30px;
-            order: 1;
         }
     }
 
@@ -251,10 +259,20 @@
     & > img {
         max-width: 100%;
         height: auto;
+        opacity: 0;
+        transition: 0.3s;
+
+        @include --xs {
+            max-height: 220px;
+            width: auto;
+            max-width: 100%;
+        }
     }
 
     @include --sm {
         padding: 0 30px;
+        text-align: center;
+        order: -1;
     }
 }
 
@@ -354,5 +372,7 @@
 
     @include --xs {
         font-size: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
