@@ -199,6 +199,7 @@
     padding-top: rem(74px);
     opacity: 0;
     transition: 0.3s;
+    will-change: transform, opacity;
 
     @include --md {
         padding-top: 50px;
@@ -230,6 +231,7 @@
     padding-top: rem(60px);
     opacity: 0;
     transition: 0.3s;
+    will-change: transform, opacity;
 
     @include --md {
         padding-top: 35px;
@@ -323,6 +325,7 @@
     position: relative;
     opacity: 0;
     transition: 0.3s;
+    will-change: transform, opacity;
 }
 
 .form__row {

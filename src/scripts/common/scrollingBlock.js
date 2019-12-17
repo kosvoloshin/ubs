@@ -5,7 +5,7 @@ $(function() {
 
     var e = $(window);
 
-    var r = (e.height() / 100) * 10;
+    var r = (e.height() / 100) * 20;
     e.on("load scroll touchmove resize", function() {
         var i = e.height() - r;
 
