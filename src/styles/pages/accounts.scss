@@ -7,6 +7,7 @@
         font-size: rem(52px);
         color: $w;
         opacity: 1;
+        visibility: visible;
 
         & + .section__description {
             margin-top: em(28/22);
@@ -37,6 +38,7 @@
         color: $w;
         margin-bottom: em(123/22);
         opacity: 1;
+        visibility: visible;
 
         @include --lg {
             font-size: 20px;

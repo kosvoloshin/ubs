@@ -32,24 +32,25 @@
 
 .section.js-scrolled {
     & .section__title {
-        animation: fadeInUp 1s;
-        opacity: 1;
+        -webkit-animation-name: contentText;
+        animation-name: contentText;
     }
 
     & .services__item {
-        animation: fadeInUp 1s;
-        opacity: 1;
+        -webkit-animation-name: contentText;
+        animation-name: contentText;
     }
     & .section__description,
     & .form,
     & .contacts__list {
-        animation: fadeIn 1.8s;
-        opacity: 1;
+        -webkit-animation-name: contentText;
+        animation-name: contentText;
+        animation-delay: 100ms;
     }
 
     & .section__image {
-        animation: zoomIn 1s;
-        opacity: 1;
+        -webkit-animation-name: contentImg;
+        animation-name: contentImg;
     }
 }
 
@@ -91,9 +92,17 @@
     letter-spacing: normal;
     color: $text;
     text-transform: uppercase;
-    opacity: 0;
-    transition: 0.3s;
     will-change: transform, opacity;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 800ms;
+    animation-duration: 800ms;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translateY(0.8em) translateZ(0);
+    transform: translateY(0.8em) translateZ(0);
 
     & + .section__description {
         margin-top: em(30/16);
@@ -134,8 +143,15 @@
     font-style: normal;
     letter-spacing: normal;
     opacity: 0;
-    transition: 0.3s;
-    will-change: transform, opacity;
+    visibility: hidden;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 800ms;
+    animation-duration: 800ms;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translateY(0.8em) translateZ(0);
+    transform: translateY(0.8em) translateZ(0);
 
     &--light {
         color: $w;
@@ -279,8 +295,15 @@
         max-width: 100%;
         height: auto;
         opacity: 0;
-        transition: 0.3s;
-        will-change: transform, opacity;
+        visibility: hidden;
+        -webkit-transform: scale(0.9) translateZ(0);
+        transform: scale(0.9) translateZ(0);
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-duration: 800ms;
+        animation-duration: 800ms;
+        -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
         @include --xs {
             max-height: 220px;

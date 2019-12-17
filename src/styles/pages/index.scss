@@ -198,8 +198,15 @@
     width: calc(100% / 3);
     padding-top: rem(74px);
     opacity: 0;
-    transition: 0.3s;
-    will-change: transform, opacity;
+    visibility: hidden;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 800ms;
+    animation-duration: 800ms;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translateY(0.8em) translateZ(0);
+    transform: translateY(0.8em) translateZ(0);
 
     @include --md {
         padding-top: 50px;
@@ -230,8 +237,15 @@
 .contacts__list {
     padding-top: rem(60px);
     opacity: 0;
-    transition: 0.3s;
-    will-change: transform, opacity;
+    visibility: hidden;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 800ms;
+    animation-duration: 800ms;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translateY(0.8em) translateZ(0);
+    transform: translateY(0.8em) translateZ(0);
 
     @include --md {
         padding-top: 35px;
@@ -324,8 +338,15 @@
     padding-top: rem(30px);
     position: relative;
     opacity: 0;
-    transition: 0.3s;
-    will-change: transform, opacity;
+    visibility: hidden;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 800ms;
+    animation-duration: 800ms;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translateY(0.8em) translateZ(0);
+    transform: translateY(0.8em) translateZ(0);
 }
 
 .form__row {
