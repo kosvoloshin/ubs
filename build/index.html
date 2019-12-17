@@ -49,7 +49,7 @@
           <div class="container">
             <div class="slider__slogan">We work with:</div>
           </div>
-          <ul class="slider__list" id="lightSlider">
+          <ul class="slider__list" id="autoplay">
             <li class="slider__item"><img src="./assets/images/slider/slider-1.png" alt="slider-image"></li>
             <li class="slider__item"><img src="./assets/images/slider/slider-2.png" alt="slider-image"></li>
             <li class="slider__item"><img src="./assets/images/slider/slider-3.png" alt="slider-image"></li>
@@ -62,13 +62,13 @@
           </ul>
           <script>
             jQuery(document).ready(function() {
-                var slider = jQuery('#lightSlider').lightSlider({
-                item:6,
-                autoWidth:true,
-                auto:true,
-                loop:true,
-                easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-                speed:1000,
+                var autoplaySlider = $('#autoplay').lightSlider({
+                    auto:true,
+                    loop:true,
+                    item:6,
+                    autoWidth:true,
+                    easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+                    speed:1000,
                     responsive : [
                         {
                             breakpoint:1800,
@@ -102,8 +102,12 @@
                                 slideMargin:0,
                             }
                         }
-                    ]
+                    ],
+                    onBeforeSlide: function (el) {
+                        $('#current').text(el.getCurrentSlideCount());
+                    } 
                 });
+                $('#total').text(autoplaySlider.getTotalSlideCount());
             });
           </script>
         </div>
