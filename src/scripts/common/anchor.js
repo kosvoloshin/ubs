@@ -3,8 +3,8 @@ window.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         var sc = $(this).attr("href"),
-            dn = $(sc).offset().top;
-
-        $("html, body").animate({ scrollTop: dn }, 1000);
+            dn = $(sc).offset().top,
+            header = $(".header").innerHeight() - 1;
+        $("html, body").animate({ scrollTop: dn - header }, 1000);
     });
 });
